@@ -15,17 +15,6 @@ type ColorRecommendation = {
   score: number;
 };
 
-const TINAYU_API_URL =
-  process.env.NEXT_PUBLIC_TINAYU_API_URL ||
-  "http://127.0.0.1:8000";
-
-const SUPPORTED_IMAGE_TYPES = new Set([
-  "image/jpeg",
-  "image/jpg",
-  "image/png",
-  "image/webp",
-]);
-
 type AnalysisData = {
   success: boolean;
   filename?: string;
@@ -45,7 +34,7 @@ type AnalysisData = {
     hair_detected: boolean;
     eyes_detected: boolean;
     skin_pixels_analyzed: number;
-    normalization_applied: boolean;
+    normalization_applied?: boolean;
   };
 
   colors?: {
@@ -383,7 +372,8 @@ function AnalysisJourney({
     analysis.colors.skin_normalized_rgb.length >= 3;
 
   const hasNormalization =
-    analysis.quality?.normalization_applied === true;
+    analysis.quality?.normalization_applied === true ||
+    analysis.normalization?.enabled === true;
 
   const hasProfile =
     !!analysis.profile?.heuristics?.suggested_season;
@@ -549,6 +539,16 @@ export default function Home() {
   const [cameraActive, setCameraActive] = useState(false);
 
   const [cameraError, setCameraError] = useState<string | null>(null);
+
+  const [scanActive, setScanActive] = useState(false);
+
+  const [scanStep, setScanStep] = useState(0);
+
+  const [scanStatus, setScanStatus] = useState(
+    "Position your face inside the guide."
+  );
+
+  const [scanProgress, setScanProgress] = useState(0);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -719,10 +719,8 @@ export default function Home() {
       return;
     }
 
-    if (!SUPPORTED_IMAGE_TYPES.has(file.type.toLowerCase())) {
-      setError(
-        "Unsupported image format. Please use JPG, JPEG, PNG, or WebP."
-      );
+    if (!file.type.startsWith("image/")) {
+      setError("Please select an image file.");
       return;
     }
 
@@ -802,24 +800,13 @@ export default function Home() {
     }
   }
 
-  function capturePhoto() {
-    if (!videoRef.current) {
-      setCameraError(
-        "Camera preview is not available."
-      );
+  async function capturePhoto() {
+    if (!videoRef.current || !cameraActive) {
+      setCameraError("Please start the camera first.");
       return;
     }
 
-    if (!cameraActive) {
-      setCameraError(
-        "Please start the camera first."
-      );
-      return;
-    }
-
-    const video = videoRef.current;
-
-    if (video.readyState < 2) {
+    if (videoRef.current.readyState < 2) {
       setCameraError(
         "The camera is still starting. Please wait a moment and try again."
       );
@@ -829,76 +816,163 @@ export default function Home() {
     const canvas = canvasRef.current;
 
     if (!canvas) {
-      setCameraError(
-        "Camera capture is unavailable."
-      );
+      setCameraError("Camera capture is unavailable.");
       return;
     }
 
-    const width =
-      video.videoWidth || 1280;
+    setCameraError(null);
+    setScanActive(true);
+    setScanStep(1);
+    setScanProgress(0);
+    setScanStatus("Look straight at the camera and hold still.");
 
-    const height =
-      video.videoHeight || 720;
+    const capturedFrames: Blob[] = [];
 
-    canvas.width = width;
-    canvas.height = height;
+    try {
+      for (let step = 0; step < 3; step++) {
+        setScanStep(step + 1);
 
-    const context =
-      canvas.getContext("2d");
-
-    if (!context) {
-      setCameraError(
-        "Unable to capture the camera frame."
-      );
-      return;
-    }
-
-    context.drawImage(
-      video,
-      0,
-      0,
-      width,
-      height
-    );
-
-    const imageUrl =
-      canvas.toDataURL(
-        "image/jpeg",
-        0.92
-      );
-
-    canvas.toBlob(
-      function (blob) {
-        if (!blob) {
-          setCameraError(
-            "Unable to create the captured image."
-          );
-          return;
+        if (step === 0) {
+          setScanStatus("Look straight at the camera and hold still.");
+        } else if (step === 1) {
+          setScanStatus("Keep your face centered and relax your expression.");
+        } else {
+          setScanStatus("Hold still while Tinayu captures the final frame.");
         }
 
-        const file = new File(
-          [blob],
-          "tinayu-webcam.jpg",
-          {
+        await new Promise<void>(function (resolve) {
+          window.setTimeout(resolve, 900);
+        });
+
+        const video = videoRef.current;
+
+        if (!video) {
+          throw new Error("Camera preview was lost.");
+        }
+
+        const width = video.videoWidth || 1280;
+        const height = video.videoHeight || 720;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        const context = canvas.getContext("2d");
+
+        if (!context) {
+          throw new Error("Unable to capture the camera frame.");
+        }
+
+        context.drawImage(video, 0, 0, width, height);
+
+        const blob = await new Promise<Blob | null>(function (resolve) {
+          canvas.toBlob(resolve, "image/jpeg", 0.92);
+        });
+
+        if (!blob) {
+          throw new Error("Tinayu could not capture one of the scan frames.");
+        }
+
+        capturedFrames.push(blob);
+        setScanProgress(Math.round(((step + 1) / 3) * 100));
+      }
+
+      setScanStatus("Analyzing your scan...");
+
+      const frameResults: Array<{
+        analysis: AnalysisData;
+        blob: Blob;
+      }> = [];
+
+      for (let i = 0; i < capturedFrames.length; i++) {
+        const formData = new FormData();
+        formData.append(
+          "file",
+          new File([capturedFrames[i]], `tinayu-scan-${i + 1}.jpg`, {
             type: "image/jpeg",
-          }
+          })
         );
 
-        setImageFile(file);
-        setImage(imageUrl);
-        setShowResults(false);
-        setAnalysis(null);
-        setError(null);
-        setCameraError(null);
+        try {
+          const response = await fetch("http://127.0.0.1:8000/analyze", {
+            method: "POST",
+            body: formData,
+          });
 
-        stopCamera();
+          const data: AnalysisData = await response.json();
 
-        setCameraMode("upload");
-      },
-      "image/jpeg",
-      0.92
-    );
+          if (response.ok && data.success) {
+            frameResults.push({
+              analysis: data,
+              blob: capturedFrames[i],
+            });
+          }
+        } catch (frameError) {
+          console.warn(`Tinayu scan frame ${i + 1} failed:`, frameError);
+        }
+      }
+
+      if (frameResults.length === 0) {
+        throw new Error(
+          "Tinayu couldn't get a reliable facial reading. Face the camera directly, move into even lighting, and try again."
+        );
+      }
+
+      const bestFrame = frameResults.reduce(function (
+        best: { analysis: AnalysisData; blob: Blob },
+        current: { analysis: AnalysisData; blob: Blob }
+      ) {
+        const bestScore = best.analysis.quality?.image_confidence ?? 0;
+        const currentScore = current.analysis.quality?.image_confidence ?? 0;
+        return currentScore > bestScore ? current : best;
+      });
+
+      setAnalysis(bestFrame.analysis);
+
+      const bestFile = new File(
+        [bestFrame.blob],
+        "tinayu-smart-scan.jpg",
+        { type: "image/jpeg" }
+      );
+
+      setImageFile(bestFile);
+
+      const bestImageUrl = URL.createObjectURL(bestFrame.blob);
+      setImage(function (previousImage) {
+        if (previousImage) {
+          URL.revokeObjectURL(previousImage);
+        }
+        return bestImageUrl;
+      });
+
+      setShowResults(true);
+      setScanStatus(
+        `Scan complete — ${frameResults.length}/3 frames successfully analyzed.`
+      );
+
+      stopCamera();
+      setCameraMode("upload");
+
+      window.setTimeout(function () {
+        const resultElement = document.getElementById("results");
+        if (resultElement) {
+          resultElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 100);
+    } catch (scanError) {
+      console.error("Tinayu smart scan error:", scanError);
+      setCameraError(
+        scanError instanceof Error
+          ? scanError.message
+          : "Something went wrong during the smart scan."
+      );
+    } finally {
+      setScanActive(false);
+      setScanProgress(0);
+      setScanStep(0);
+    }
   }
 
   async function handleAnalyze() {
@@ -924,40 +998,23 @@ export default function Home() {
 
       const response =
         await fetch(
-          TINAYU_API_URL + "/analyze",
+          "http://127.0.0.1:8000/analyze",
           {
             method: "POST",
             body: formData,
           }
         );
 
-      const responseText =
-        await response.text();
-
-      let data: AnalysisData | null = null;
-
-      try {
-        data = responseText
-          ? (JSON.parse(responseText) as AnalysisData)
-          : null;
-      } catch {
-        data = null;
-      }
-
       if (!response.ok) {
         throw new Error(
-          data?.error ||
-            "API request failed with status " +
-              response.status +
-              "."
+          "API request failed with status " +
+            response.status +
+            "."
         );
       }
 
-      if (!data) {
-        throw new Error(
-          "Tinayu returned an invalid response from the analysis server."
-        );
-      }
+      const data: AnalysisData =
+        await response.json();
 
       console.log(
         "Tinayu API result:",
@@ -1022,6 +1079,10 @@ export default function Home() {
     setError(null);
     setCameraError(null);
     setCameraMode("upload");
+    setScanActive(false);
+    setScanStep(0);
+    setScanProgress(0);
+    setScanStatus("Position your face inside the guide.");
 
     if (fileInputRef.current) {
       fileInputRef.current.value =
@@ -1164,7 +1225,7 @@ export default function Home() {
             </h1>
 
             <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-stone-500 sm:text-lg">
-              Upload a photo or use your webcam. Tinayu analyzes
+              Upload a photo or use Smart Scan. Tinayu validates and analyzes
               facial color characteristics and creates a personalized
               palette for clothing, makeup, and accents.
             </p>
@@ -1296,8 +1357,7 @@ export default function Home() {
                             </h2>
 
                             <p className="mt-2 max-w-md text-sm leading-6 text-white/60">
-                              Click the button below to give your browser
-                              permission to access your webcam.
+                              Click the button below to start a guided three-frame scan. Your browser will ask for camera permission if needed.
                             </p>
                           </div>
                         )}
@@ -1317,10 +1377,34 @@ export default function Home() {
                         )}
 
                         {cameraActive && (
-                          <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/50 px-3 py-2 text-xs font-medium text-white backdrop-blur">
-                            <span className="h-2 w-2 animate-pulse rounded-full bg-red-400" />
-                            Camera active
-                          </div>
+                          <>
+                            <div className="pointer-events-none absolute inset-0">
+                              <div className="absolute inset-x-[16%] top-[10%] bottom-[10%] rounded-[45%] border-2 border-white/80 shadow-[0_0_0_9999px_rgba(0,0,0,0.18)]" />
+
+                              <div
+                                className={
+                                  "absolute left-[18%] right-[18%] h-0.5 bg-white/80 shadow-[0_0_12px_rgba(255,255,255,0.8)] transition-all duration-500 " +
+                                  (scanActive ? "animate-pulse" : "")
+                                }
+                                style={{
+                                  top: scanActive
+                                    ? `${18 + scanProgress * 0.55}%`
+                                    : "50%",
+                                }}
+                              />
+
+                              <div className="absolute left-1/2 top-5 -translate-x-1/2 rounded-full bg-black/55 px-4 py-2 text-center text-xs font-medium text-white backdrop-blur">
+                                {scanActive
+                                  ? `Step ${scanStep} of 3 · ${scanStatus}`
+                                  : "Center your face inside the guide"}
+                              </div>
+                            </div>
+
+                            <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/50 px-3 py-2 text-xs font-medium text-white backdrop-blur">
+                              <span className="h-2 w-2 animate-pulse rounded-full bg-red-400" />
+                              {scanActive ? "Scanning" : "Camera active"}
+                            </div>
+                          </>
                         )}
                       </div>
                     </div>
@@ -1364,10 +1448,20 @@ export default function Home() {
                           <button
                             type="button"
                             onClick={capturePhoto}
-                            className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-sm font-semibold text-white transition hover:bg-stone-800"
+                            disabled={scanActive}
+                            className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-sm font-semibold text-white transition hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-60"
                           >
-                            <CameraIcon />
-                            Capture photo
+                            {scanActive ? (
+                              <>
+                                <div className="h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                                Scanning {scanStep}/3
+                              </>
+                            ) : (
+                              <>
+                                <CameraIcon />
+                                Start Smart Scan
+                              </>
+                            )}
                           </button>
 
                           <button
@@ -1381,9 +1475,32 @@ export default function Home() {
                       )}
                     </div>
 
+                    {scanActive && (
+                      <div className="rounded-2xl border border-stone-200 bg-stone-50 p-4">
+                        <div className="flex items-center justify-between gap-3">
+                          <p className="text-xs font-semibold uppercase tracking-widest text-stone-400">
+                            Smart Scan
+                          </p>
+                          <span className="text-xs font-semibold text-stone-600">
+                            {scanProgress}%
+                          </span>
+                        </div>
+
+                        <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-stone-200">
+                          <div
+                            className="h-full rounded-full bg-stone-900 transition-all duration-500"
+                            style={{ width: `${scanProgress}%` }}
+                          />
+                        </div>
+
+                        <p className="mt-3 text-center text-xs leading-5 text-stone-500">
+                          {scanStatus}
+                        </p>
+                      </div>
+                    )}
+
                     <p className="text-center text-xs leading-5 text-stone-400">
-                      For the best analysis, face the camera directly and
-                      use natural or evenly distributed lighting.
+                      Tinayu captures three guided frames, checks each one, and uses the strongest valid frame for your analysis.
                     </p>
 
                     <canvas
@@ -1433,7 +1550,7 @@ export default function Home() {
                 </p>
 
                 <p className="mt-2 text-sm font-medium">
-                  Upload or capture
+                  Upload or smart scan
                 </p>
               </div>
 
@@ -1443,7 +1560,7 @@ export default function Home() {
                 </p>
 
                 <p className="mt-2 text-sm font-medium">
-                  Tinayu analyzes
+                  Tinayu validates and analyzes
                 </p>
               </div>
 

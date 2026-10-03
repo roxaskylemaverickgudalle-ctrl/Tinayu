@@ -523,14 +523,10 @@ def extract_hair_color(
     landmarks
 ):
     """
-    Estimate hair color from areas immediately above and beside
-    the forehead.
+    Estimate hair color from a region above the forehead.
 
-    The previous implementation sampled a large rectangle above
-    the forehead. That can accidentally capture sky or a bright
-    background and then treat it as hair. This version uses a few
-    smaller candidate regions and rejects pixels that look like
-    bright background rather than plausible hair.
+    Hair is optional because not every image
+    provides a usable hair region.
     """
 
     points = landmarks_to_pixels(
@@ -540,8 +536,7 @@ def extract_hair_color(
 
     height, width = image_rgb.shape[:2]
 
-    # Facial landmarks around the upper face / temples.
-    top_indices = [
+    forehead_indices = [
         10,
         338,
         297,
@@ -549,230 +544,57 @@ def extract_hair_color(
         284
     ]
 
-    left_indices = [
-        127,
-        234,
-        93,
-        132
+    forehead_points = points[
+        forehead_indices
     ]
 
-    right_indices = [
-        356,
-        454,
-        323,
-        361
-    ]
-
-    top_points = points[top_indices]
-    left_points = points[left_indices]
-    right_points = points[right_indices]
-
-    face_top_y = int(
-        np.min(top_points[:, 1])
-    )
-
-    face_left_x = int(
-        np.min(left_points[:, 0])
-    )
-
-    face_right_x = int(
-        np.max(right_points[:, 0])
-    )
-
-    # Small regions are more reliable than one large background-heavy
-    # rectangle.
-    regions = []
-
-    forehead_width = max(
-        face_right_x - face_left_x,
-        40
-    )
-
-    x_pad = max(
-        int(forehead_width * 0.08),
-        8
-    )
-
-    x1 = max(
-        face_left_x + x_pad,
+    x_min = max(
+        int(np.min(
+            forehead_points[:, 0]
+        )) - 20,
         0
     )
 
-    x2 = min(
-        face_right_x - x_pad,
-        width
+    x_max = min(
+        int(np.max(
+            forehead_points[:, 0]
+        )) + 20,
+        width - 1
     )
 
-    y1 = max(
-        face_top_y - 45,
+    y_min = max(
+        int(np.min(
+            forehead_points[:, 1]
+        )) - 80,
         0
     )
 
-    y2 = max(
-        face_top_y - 4,
+    y_max = max(
+        int(np.min(
+            forehead_points[:, 1]
+        )) - 10,
         0
     )
 
-    if x2 > x1 and y2 > y1:
-        regions.append(
-            image_rgb[y1:y2, x1:x2]
-        )
-
-    # Temple strips catch hair when the forehead is partly covered,
-    # while keeping the sample close to the face.
-    temple_height = max(
-        int(height * 0.08),
-        20
-    )
-
-    left_x1 = max(
-        face_left_x - max(int(forehead_width * 0.10), 8),
-        0
-    )
-
-    left_x2 = min(
-        face_left_x + max(int(forehead_width * 0.02), 5),
-        width
-    )
-
-    right_x1 = max(
-        face_right_x - max(int(forehead_width * 0.02), 5),
-        0
-    )
-
-    right_x2 = min(
-        face_right_x + max(int(forehead_width * 0.10), 8),
-        width
-    )
-
-    temple_y1 = max(
-        face_top_y,
-        0
-    )
-
-    temple_y2 = min(
-        face_top_y + temple_height,
-        height
-    )
-
-    if left_x2 > left_x1 and temple_y2 > temple_y1:
-        regions.append(
-            image_rgb[
-                temple_y1:temple_y2,
-                left_x1:left_x2
-            ]
-        )
-
-    if right_x2 > right_x1 and temple_y2 > temple_y1:
-        regions.append(
-            image_rgb[
-                temple_y1:temple_y2,
-                right_x1:right_x2
-            ]
-        )
-
-    if not regions:
+    if x_max <= x_min:
         return None
 
-    candidates = []
+    if y_max <= y_min:
+        return None
 
-    for region in regions:
+    region = image_rgb[
+        y_min:y_max,
+        x_min:x_max
+    ]
 
-        if region.size == 0:
-            continue
+    if region.size == 0:
+        return None
 
-        pixels = region.reshape(
+    return np.median(
+        region.reshape(
             -1,
             3
-        ).astype(
-            np.uint8
-        )
-
-        hsv = cv2.cvtColor(
-            pixels.reshape(1, -1, 3),
-            cv2.COLOR_RGB2HSV
-        )[0]
-
-        # OpenCV HSV:
-        # H = 0..179, S = 0..255, V = 0..255
-        hue = hsv[:, 0].astype(float) * 2.0
-        saturation = hsv[:, 1].astype(float)
-        value = hsv[:, 2].astype(float)
-
-        # Reject obvious bright blue/cyan sky and similarly bright
-        # background pixels. These were responsible for colors such
-        # as [114, 193, 250] being detected as "hair".
-        bright_cool_background = (
-            (value > 220)
-            &
-            (saturation > 45)
-            &
-            (hue >= 150)
-            &
-            (hue <= 270)
-        )
-
-        # Reject near-white/gray background.
-        bright_neutral_background = (
-            (value > 238)
-            &
-            (saturation < 35)
-        )
-
-        valid = ~(
-            bright_cool_background
-            |
-            bright_neutral_background
-        )
-
-        filtered = pixels[valid]
-
-        if len(filtered) == 0:
-            continue
-
-        # Remove extreme highlights/shadows so a small reflection or
-        # border pixel does not dominate the estimate.
-        filtered_hsv = cv2.cvtColor(
-            filtered.reshape(1, -1, 3),
-            cv2.COLOR_RGB2HSV
-        )[0]
-
-        filtered_value = filtered_hsv[:, 2]
-
-        low = np.percentile(
-            filtered_value,
-            10
-        )
-
-        high = np.percentile(
-            filtered_value,
-            90
-        )
-
-        trimmed = filtered[
-            (filtered_value >= low)
-            &
-            (filtered_value <= high)
-        ]
-
-        if len(trimmed) >= 5:
-            candidates.append(trimmed)
-
-    if not candidates:
-        return None
-
-    pixels = np.concatenate(
-        candidates,
-        axis=0
-    )
-
-    if len(pixels) < 5:
-        return None
-
-    # Median is more robust than a mean when a few background pixels
-    # survive the filtering.
-    return np.median(
-        pixels,
+        ),
         axis=0
     ).astype(
         int
@@ -1274,23 +1096,6 @@ def get_hue_family(hue):
     return "Pink"
 
 
-def get_recommendation_hue_family(features):
-    """
-    Resolve a palette color into a recommendation-specific family.
-
-    Dark warm orange hues are treated as Brown because HSV hue
-    alone cannot distinguish brown from orange.
-    """
-
-    hue = float(features["hue"]) % 360
-    lightness = float(features["lab"][0])
-
-    if 20 <= hue < 45 and lightness < 55:
-        return "Brown"
-
-    return get_hue_family(hue)
-
-
 def range_score(value, minimum, maximum):
     """
     Score how well a value fits inside a preferred range.
@@ -1335,7 +1140,7 @@ def season_compatibility(features, season):
     temperature = classify_color_temperature(features)
     chroma = float(features["chroma"])
     lightness = float(features["lab"][0])
-    family = get_recommendation_hue_family(features)
+    family = get_hue_family(features["hue"])
 
     temperature_score = profile["temperature"].get(
         temperature,
@@ -1389,7 +1194,7 @@ def category_compatibility(
 
     chroma = float(features["chroma"])
     lightness = float(features["lab"][0])
-    family = get_recommendation_hue_family(features)
+    family = get_hue_family(features["hue"])
 
     family_score = profile["preferred_families"].get(
         family,
@@ -1667,9 +1472,12 @@ def build_recommendation(
     """
     Rank palette colors and return diverse recommendations.
 
-    The returned list is always sorted from highest to lowest
-    displayed score. Diversity is applied during selection, not
-    after the final ranking.
+    The palette uses the existing Tinayu format:
+
+        [
+            ("Color Name", "#HEX"),
+            ...
+        ]
     """
 
     scored = []
@@ -1692,8 +1500,8 @@ def build_recommendation(
             "hex": hex_color,
             "compatibility": compatibility,
             "hue": features["hue"],
-            "family": get_recommendation_hue_family(
-                features
+            "family": get_hue_family(
+                features["hue"]
             ),
             "temperature": classify_color_temperature(
                 features
@@ -1707,7 +1515,77 @@ def build_recommendation(
         return []
 
     # --------------------------------------------------------
-    # Normalize the underlying compatibility values first.
+    # Sort by raw compatibility first.
+    # --------------------------------------------------------
+
+    scored.sort(
+        key=lambda item: item["compatibility"],
+        reverse=True
+    )
+
+    # --------------------------------------------------------
+    # Diversity-aware selection.
+    #
+    # Avoid returning five nearly identical colors from the
+    # same hue family when another strong candidate exists.
+    # --------------------------------------------------------
+
+    selected = []
+
+    for candidate in scored:
+
+        if not selected:
+
+            selected.append(
+                candidate
+            )
+
+            continue
+
+        candidate_family = candidate[
+            "family"
+        ]
+
+        same_family_count = sum(
+            1
+            for item in selected
+            if item["family"] == candidate_family
+        )
+
+        adjusted_score = candidate[
+            "compatibility"
+        ]
+
+        if same_family_count >= 2:
+            adjusted_score -= 0.025
+
+        candidate = {
+            **candidate,
+            "adjusted_score": adjusted_score
+        }
+
+        selected.append(
+            candidate
+        )
+
+        if len(selected) >= limit:
+            break
+
+    selected.sort(
+        key=lambda item: item.get(
+            "adjusted_score",
+            item["compatibility"]
+        ),
+        reverse=True
+    )
+
+    selected = selected[:limit]
+
+    # --------------------------------------------------------
+    # Convert raw compatibility into a relative UI score.
+    #
+    # IMPORTANT:
+    # These are not probabilities.
     # --------------------------------------------------------
 
     values = [
@@ -1722,77 +1600,13 @@ def build_recommendation(
         maximum - minimum
     )
 
-    # --------------------------------------------------------
-    # Greedy diversity selection.
-    #
-    # At every step choose the strongest remaining candidate,
-    # applying only a small penalty when its hue family is already
-    # represented twice. This prevents five near-duplicates while
-    # still allowing strong colors to remain in the list.
-    # --------------------------------------------------------
-
-    remaining = list(scored)
-    selected = []
-
-    while remaining and len(selected) < limit:
-
-        best_index = 0
-        best_adjusted = -1.0
-
-        family_counts = {}
-
-        for item in selected:
-            family = item["family"]
-            family_counts[family] = (
-                family_counts.get(family, 0)
-                + 1
-            )
-
-        for index, candidate in enumerate(remaining):
-
-            family = candidate["family"]
-
-            penalty = 0.0
-
-            if family_counts.get(family, 0) >= 2:
-                penalty = 0.025
-
-            adjusted = (
-                candidate["compatibility"]
-                - penalty
-            )
-
-            if adjusted > best_adjusted:
-                best_adjusted = adjusted
-                best_index = index
-
-        chosen = remaining.pop(
-            best_index
-        )
-
-        chosen = {
-            **chosen,
-            "adjusted_score": best_adjusted
-        }
-
-        selected.append(
-            chosen
-        )
-
-    # --------------------------------------------------------
-    # Final ordering MUST match the displayed score.
-    # --------------------------------------------------------
-
-    selected.sort(
-        key=lambda item: item["compatibility"],
-        reverse=True
-    )
-
     results = []
 
     for item in selected:
 
-        raw_score = item["compatibility"]
+        raw_score = item[
+            "compatibility"
+        ]
 
         if score_range < 1e-9:
 
@@ -1823,13 +1637,6 @@ def build_recommendation(
                 1
             )
         })
-
-    # Defensive final sort so the API can never return a lower
-    # displayed score before a higher displayed score.
-    results.sort(
-        key=lambda item: item["score"],
-        reverse=True
-    )
 
     return results[:limit]
 
@@ -1896,12 +1703,76 @@ def classify_temperature(
 ):
     """
     Estimate skin temperature from LAB.
+
+    This preserves Tinayu's original deterministic temperature
+    classifier for component-level validation. The automatic profile
+    uses the softer stable classifier below.
     """
 
     if lab_b >= 18 and lab_a >= 8:
         return "Warm"
 
     if lab_b <= 10 and lab_a <= 8:
+        return "Cool"
+
+    return "Neutral"
+
+
+def temperature_score(
+    lab_a,
+    lab_b
+):
+    """
+    Return a continuous warm-to-cool score in the 0..1 range.
+
+    The score uses LAB a/b evidence around a neutral center instead of
+    two independent hard gates. This makes near-boundary profiles more
+    stable while preserving clearly warm and clearly cool cases.
+    """
+
+    a = float(lab_a)
+    b = float(lab_b)
+
+    signal = (
+        ((a - 8.0) / 8.0) * 0.40
+        +
+        ((b - 14.0) / 8.0) * 0.60
+    )
+
+    score = 1.0 / (
+        1.0
+        +
+        np.exp(
+            -signal
+        )
+    )
+
+    return float(
+        np.clip(
+            score,
+            0.0,
+            1.0
+        )
+    )
+
+
+def classify_temperature_stable(
+    lab_a,
+    lab_b
+):
+    """
+    Softer temperature classifier used by automatic profile building.
+    """
+
+    warm_score = temperature_score(
+        lab_a,
+        lab_b
+    )
+
+    if warm_score >= 0.55:
+        return "Warm"
+
+    if warm_score <= 0.45:
         return "Cool"
 
     return "Neutral"
@@ -1929,45 +1800,27 @@ def classify_contrast(
     eye_rgb=None
 ):
     """
-    Estimate visual contrast using LAB lightness differences.
-
-    LAB lightness is used instead of raw RGB distance because RGB
-    distance can exaggerate hue differences (for example a blue
-    background accidentally detected as hair).
+    Estimate visual contrast using RGB distances.
     """
-
-    skin_lab = rgb_to_lab(
-        skin_rgb
-    )
 
     contrasts = {}
 
     if hair_rgb is not None:
 
-        hair_lab = rgb_to_lab(
+        contrasts[
+            "skin_hair"
+        ] = rgb_distance(
+            skin_rgb,
             hair_rgb
-        )
-
-        contrasts["skin_hair"] = float(
-            abs(
-                skin_lab[0]
-                -
-                hair_lab[0]
-            )
         )
 
     if eye_rgb is not None:
 
-        eye_lab = rgb_to_lab(
+        contrasts[
+            "skin_eye"
+        ] = rgb_distance(
+            skin_rgb,
             eye_rgb
-        )
-
-        contrasts["skin_eye"] = float(
-            abs(
-                skin_lab[0]
-                -
-                eye_lab[0]
-            )
         )
 
     if (
@@ -1976,23 +1829,15 @@ def classify_contrast(
         eye_rgb is not None
     ):
 
-        hair_lab = rgb_to_lab(
-            hair_rgb
-        )
-
-        eye_lab = rgb_to_lab(
+        contrasts[
+            "hair_eye"
+        ] = rgb_distance(
+            hair_rgb,
             eye_rgb
         )
 
-        contrasts["hair_eye"] = float(
-            abs(
-                hair_lab[0]
-                -
-                eye_lab[0]
-            )
-        )
-
     if not contrasts:
+
         return (
             {},
             "Unknown"
@@ -2002,23 +1847,20 @@ def classify_contrast(
         contrasts.values()
     )
 
-    if max_contrast < 20:
+    if max_contrast < 35:
+
         level = "Low"
 
-    elif max_contrast < 40:
+    elif max_contrast < 150:
+
         level = "Moderate"
 
     else:
+
         level = "High"
 
     return (
-        {
-            key: round(
-                float(value),
-                2
-            )
-            for key, value in contrasts.items()
-        },
+        contrasts,
         level
     )
 
@@ -2026,48 +1868,63 @@ def classify_contrast(
 def suggest_season(
     temperature,
     saturation,
-    skin_depth
+    skin_depth,
+    temperature_strength=None
 ):
     """
     Estimate a broad seasonal palette.
 
-    This is a heuristic starting point,
-    not a definitive diagnosis.
+    A continuous temperature strength can be supplied so that the
+    season decision remains smoother near the warm/neutral boundary.
     """
 
-    if temperature == "Warm":
+    if temperature_strength is None:
+        temperature_strength = (
+            1.0
+            if temperature == "Warm"
+            else 0.0
+            if temperature == "Cool"
+            else 0.5
+        )
+
+    strength = float(
+        np.clip(
+            temperature_strength,
+            0.0,
+            1.0
+        )
+    )
+
+    # Treat only clearly directional temperature evidence as warm/cool.
+    # The middle band keeps borderline images from jumping between a
+    # seasonal family and Neutral.
+    if strength >= 0.58:
 
         if saturation == "Clear":
-
             return "Warm Spring"
 
         if saturation == "Muted":
-
             return "Warm Autumn"
 
         if skin_depth in [
             "Deep",
             "Medium"
         ]:
-
             return "Warm Autumn"
 
         return "Warm Spring"
 
-    if temperature == "Cool":
+    if strength <= 0.42:
 
         if saturation == "Clear":
-
             return "Cool Winter"
 
         return "Cool Summer"
 
     if saturation == "Clear":
-
         return "Spring"
 
     if saturation == "Muted":
-
         return "Autumn"
 
     return "Neutral"
@@ -2109,8 +1966,13 @@ def build_automatic_profile(
         )
     )
 
+    temperature_strength = temperature_score(
+        skin_lab[1],
+        skin_lab[2]
+    )
+
     temperature = (
-        classify_temperature(
+        classify_temperature_stable(
             skin_lab[1],
             skin_lab[2]
         )
@@ -2133,7 +1995,8 @@ def build_automatic_profile(
     season = suggest_season(
         temperature,
         saturation,
-        skin_category
+        skin_category,
+        temperature_strength
     )
 
     profile = {
@@ -2188,6 +2051,14 @@ def build_automatic_profile(
 
             "temperature":
                 temperature,
+
+            "temperature_strength":
+                round(
+                    float(
+                        temperature_strength
+                    ),
+                    3
+                ),
 
             "suggested_season":
                 season,
@@ -2560,14 +2431,13 @@ def analyze_image(
             "image_confidence":
                 quality_score,
 
+            "normalization_applied": True,
+
             "hair_detected":
                 hair_rgb is not None,
 
             "eyes_detected":
                 eye_rgb is not None,
-
-            "normalization_applied":
-                True,
 
             "skin_pixels_analyzed":
                 skin_pixels
