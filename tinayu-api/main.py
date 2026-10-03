@@ -1,8 +1,13 @@
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
 from tinayu_engine import analyze_image
 
+
+# ============================================================
+# APP CONFIGURATION
+# ============================================================
 
 app = FastAPI(
     title="Tinayu API",
@@ -10,6 +15,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
+
+# ============================================================
+# CORS
+# ============================================================
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,6 +31,10 @@ app.add_middleware(
 )
 
 
+# ============================================================
+# ROOT ENDPOINT
+# ============================================================
+
 @app.get("/")
 def root():
     return {
@@ -31,30 +44,90 @@ def root():
     }
 
 
+# ============================================================
+# HEALTH ENDPOINT
+# ============================================================
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy"
+    }
+
+
+# ============================================================
+# ANALYSIS ENDPOINT
+# ============================================================
+
 @app.post("/analyze")
 async def analyze(file: UploadFile = File(...)):
 
     try:
+        # ------------------------------------------------------
+        # Validate upload
+        # ------------------------------------------------------
 
-        # -----------------------------
+        if not file:
+            return {
+                "success": False,
+                "error": "No image file was provided."
+            }
+
+        if not file.filename:
+            return {
+                "success": False,
+                "error": "Uploaded file has no filename."
+            }
+
+        # ------------------------------------------------------
+        # Validate file type
+        # ------------------------------------------------------
+
+        allowed_types = {
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "image/jpg"
+        }
+
+        if file.content_type not in allowed_types:
+            return {
+                "success": False,
+                "error": (
+                    "Unsupported image format. "
+                    "Please upload a JPG, PNG, or WebP image."
+                )
+            }
+
+        # ------------------------------------------------------
         # Read uploaded image
-        # -----------------------------
+        # ------------------------------------------------------
 
         image_bytes = await file.read()
 
-        # -----------------------------
+        if not image_bytes:
+            return {
+                "success": False,
+                "error": "The uploaded image is empty."
+            }
+
+        # ------------------------------------------------------
         # Run Tinayu analysis engine
-        # -----------------------------
+        # ------------------------------------------------------
 
         result = analyze_image(
             image_bytes
         )
 
-        # -----------------------------
+        # ------------------------------------------------------
         # Add upload information
-        # -----------------------------
+        # ------------------------------------------------------
 
         result["filename"] = file.filename
+
+        # ------------------------------------------------------
+        # Return complete Tinayu analysis
+        # ------------------------------------------------------
 
         return result
 
@@ -72,3 +145,4 @@ async def analyze(file: UploadFile = File(...)):
             "error": "Unexpected server error.",
             "details": str(error)
         }
+

@@ -15,6 +15,17 @@ type ColorRecommendation = {
   score: number;
 };
 
+const TINAYU_API_URL =
+  process.env.NEXT_PUBLIC_TINAYU_API_URL ||
+  "http://127.0.0.1:8000";
+
+const SUPPORTED_IMAGE_TYPES = new Set([
+  "image/jpeg",
+  "image/jpg",
+  "image/png",
+  "image/webp",
+]);
+
 type AnalysisData = {
   success: boolean;
   filename?: string;
@@ -34,6 +45,7 @@ type AnalysisData = {
     hair_detected: boolean;
     eyes_detected: boolean;
     skin_pixels_analyzed: number;
+    normalization_applied: boolean;
   };
 
   colors?: {
@@ -138,7 +150,7 @@ function formatScore(score: number | undefined) {
     return "—";
   }
 
-  return Math.round(score) + "%";
+  return Math.round(score) + "/100";
 }
 
 function formatRgb(rgb: number[] | undefined | null) {
@@ -371,7 +383,7 @@ function AnalysisJourney({
     analysis.colors.skin_normalized_rgb.length >= 3;
 
   const hasNormalization =
-    analysis.normalization?.enabled === true;
+    analysis.quality?.normalization_applied === true;
 
   const hasProfile =
     !!analysis.profile?.heuristics?.suggested_season;
@@ -707,8 +719,10 @@ export default function Home() {
       return;
     }
 
-    if (!file.type.startsWith("image/")) {
-      setError("Please select an image file.");
+    if (!SUPPORTED_IMAGE_TYPES.has(file.type.toLowerCase())) {
+      setError(
+        "Unsupported image format. Please use JPG, JPEG, PNG, or WebP."
+      );
       return;
     }
 
@@ -910,23 +924,40 @@ export default function Home() {
 
       const response =
         await fetch(
-          "http://127.0.0.1:8000/analyze",
+          TINAYU_API_URL + "/analyze",
           {
             method: "POST",
             body: formData,
           }
         );
 
+      const responseText =
+        await response.text();
+
+      let data: AnalysisData | null = null;
+
+      try {
+        data = responseText
+          ? (JSON.parse(responseText) as AnalysisData)
+          : null;
+      } catch {
+        data = null;
+      }
+
       if (!response.ok) {
         throw new Error(
-          "API request failed with status " +
-            response.status +
-            "."
+          data?.error ||
+            "API request failed with status " +
+              response.status +
+              "."
         );
       }
 
-      const data: AnalysisData =
-        await response.json();
+      if (!data) {
+        throw new Error(
+          "Tinayu returned an invalid response from the analysis server."
+        );
+      }
 
       console.log(
         "Tinayu API result:",
