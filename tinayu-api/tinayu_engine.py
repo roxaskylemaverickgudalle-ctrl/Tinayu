@@ -1526,61 +1526,123 @@ def build_recommendation(
     # --------------------------------------------------------
     # Diversity-aware selection.
     #
-    # Avoid returning five nearly identical colors from the
-    # same hue family when another strong candidate exists.
+    # Select the best adjusted candidate at every step instead
+    # of selecting the first five and sorting afterward.
+    # This makes the diversity penalty actually influence which
+    # colors enter the final recommendation set.
     # --------------------------------------------------------
 
     selected = []
+    remaining = scored.copy()
 
-    for candidate in scored:
+    while remaining and len(selected) < limit:
 
-        if not selected:
+        best_candidate = None
+        best_adjusted_score = -1.0
 
-            selected.append(
-                candidate
+        for candidate in remaining:
+
+            candidate_family = candidate["family"]
+
+            same_family_count = sum(
+                1
+                for item in selected
+                if item["family"] == candidate_family
             )
 
-            continue
+            adjusted_score = candidate["compatibility"]
 
-        candidate_family = candidate[
-            "family"
-        ]
+            if same_family_count >= 2:
+                adjusted_score -= 0.025
 
-        same_family_count = sum(
-            1
-            for item in selected
-            if item["family"] == candidate_family
-        )
+            if (
+                best_candidate is None
+                or adjusted_score > best_adjusted_score
+            ):
+                best_candidate = candidate
+                best_adjusted_score = adjusted_score
 
-        adjusted_score = candidate[
-            "compatibility"
-        ]
-
-        if same_family_count >= 2:
-            adjusted_score -= 0.025
-
-        candidate = {
-            **candidate,
-            "adjusted_score": adjusted_score
-        }
-
-        selected.append(
-            candidate
-        )
-
-        if len(selected) >= limit:
+        if best_candidate is None:
             break
 
+        selected.append({
+            **best_candidate,
+            "adjusted_score": best_adjusted_score
+        })
+
+        remaining.remove(best_candidate)
+
+    # --------------------------------------------------------
+    # Keep the final recommendation order based on the actual
+    # adjusted ranking.
+    # --------------------------------------------------------
+
     selected.sort(
-        key=lambda item: item.get(
-            "adjusted_score",
-            item["compatibility"]
-        ),
+        key=lambda item: item["adjusted_score"],
         reverse=True
     )
 
-    selected = selected[:limit]
+    # --------------------------------------------------------
+    # Convert raw compatibility into a relative UI score.
+    #
+    # IMPORTANT:
+    # These are not probabilities.
+    # --------------------------------------------------------
 
+    values = [
+        item["compatibility"]
+        for item in scored
+    ]
+
+    minimum = min(values)
+    maximum = max(values)
+
+    score_range = (
+        maximum - minimum
+    )
+
+    results = []
+
+    for item in selected:
+
+        raw_score = item["compatibility"]
+
+        if score_range < 1e-9:
+
+            relative_score = 75.0
+
+        else:
+
+            normalized = (
+                raw_score - minimum
+            ) / score_range
+
+            relative_score = (
+                60.0
+                + normalized * 35.0
+            )
+
+        results.append({
+            "name": item["name"],
+            "hex": item["hex"],
+            "score": round(
+                float(
+                    np.clip(
+                        relative_score,
+                        60.0,
+                        95.0
+                    )
+                ),
+                1
+            )
+        })
+
+        results.sort(
+        key=lambda item: item["score"],
+        reverse=True
+    )
+
+    return results[:limit]
     # --------------------------------------------------------
     # Convert raw compatibility into a relative UI score.
     #
@@ -1978,6 +2040,17 @@ def build_automatic_profile(
         )
     )
 
+    if temperature_strength <= 0.42:
+        temperature_strength_band = "Strong Cool"
+    elif temperature_strength < 0.45:
+        temperature_strength_band = "Borderline Cool"
+    elif temperature_strength < 0.55:
+        temperature_strength_band = "Neutral"
+    elif temperature_strength < 0.58:
+        temperature_strength_band = "Borderline Warm"
+    else:
+        temperature_strength_band = "Strong Warm"
+
     saturation = (
         classify_skin_saturation(
             skin_chroma
@@ -2059,6 +2132,9 @@ def build_automatic_profile(
                     ),
                     3
                 ),
+
+            "temperature_strength_band":
+                temperature_strength_band,
 
             "suggested_season":
                 season,
