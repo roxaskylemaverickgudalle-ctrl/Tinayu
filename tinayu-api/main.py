@@ -1,8 +1,8 @@
-
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
 from tinayu_engine import analyze_image
+from llama_explainer import generate_explanation
 
 
 # ============================================================
@@ -63,6 +63,7 @@ def health():
 async def analyze(file: UploadFile = File(...)):
 
     try:
+
         # ------------------------------------------------------
         # Validate upload
         # ------------------------------------------------------
@@ -120,6 +121,25 @@ async def analyze(file: UploadFile = File(...)):
         )
 
         # ------------------------------------------------------
+        # Generate Llama explanation
+        # ------------------------------------------------------
+
+        if result.get("success"):
+
+            try:
+
+                result["explanation"] = generate_explanation(
+                    result.get("profile", {}),
+                    result.get("recommendations", {})
+                )
+
+            except Exception:
+
+                # Llama failure should never break
+                # the main Tinayu color analysis.
+                result["explanation"] = None
+
+        # ------------------------------------------------------
         # Add upload information
         # ------------------------------------------------------
 
@@ -145,4 +165,3 @@ async def analyze(file: UploadFile = File(...)):
             "error": "Unexpected server error.",
             "details": str(error)
         }
-
