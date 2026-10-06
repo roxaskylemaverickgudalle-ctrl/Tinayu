@@ -1,0 +1,534 @@
+{
+  "experiment": "Current mean RGB vs LAB percentile-trimmed median",
+  "engine_modified": false,
+  "image_count": 7,
+  "successful": 7,
+  "failed": 0,
+  "results": [
+    {
+      "file": "Bright indoor lighting.webp",
+      "current": {
+        "raw_rgb": [
+          220,
+          173,
+          165
+        ],
+        "normalized_rgb": [
+          200,
+          154,
+          145
+        ],
+        "lab": {
+          "L": 67.84,
+          "a": 16.0,
+          "b": 11.0
+        },
+        "temperature_strength": 0.544,
+        "temperature": "Neutral",
+        "season": "Neutral",
+        "saturation": "Moderate"
+      },
+      "robust": {
+        "normalized_rgb": [
+          194,
+          148,
+          140
+        ],
+        "lab": {
+          "L": 65.49,
+          "a": 16.0,
+          "b": 11.0
+        },
+        "hue": 8.0,
+        "chroma": 19.42,
+        "temperature_strength": 0.544,
+        "temperature": "Neutral",
+        "season": "Neutral",
+        "saturation": "Moderate"
+      },
+      "experiment": {
+        "total_cheek_pixels": 242,
+        "pixels_after_trim": 163,
+        "pixels_removed": 79,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          211,
+          164,
+          155
+        ],
+        "robust_raw_lab": {
+          "L": 71.37,
+          "a": 16.0,
+          "b": 11.0
+        },
+        "temperature_strength_delta": 0.0
+      },
+      "quality": {
+        "image_confidence": 93.42,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 242
+      },
+      "face_confidence": 0.9774
+    },
+    {
+      "file": "Different camera.webp",
+      "current": {
+        "raw_rgb": [
+          206,
+          163,
+          148
+        ],
+        "normalized_rgb": [
+          191,
+          149,
+          134
+        ],
+        "lab": {
+          "L": 65.1,
+          "a": 13.0,
+          "b": 14.0
+        },
+        "temperature_strength": 0.562,
+        "temperature": "Warm",
+        "season": "Neutral",
+        "saturation": "Moderate"
+      },
+      "robust": {
+        "normalized_rgb": [
+          189,
+          146,
+          133
+        ],
+        "lab": {
+          "L": 64.31,
+          "a": 14.0,
+          "b": 13.0
+        },
+        "hue": 14.0,
+        "chroma": 19.1,
+        "temperature_strength": 0.556,
+        "temperature": "Warm",
+        "season": "Neutral",
+        "saturation": "Moderate"
+      },
+      "experiment": {
+        "total_cheek_pixels": 705,
+        "pixels_after_trim": 490,
+        "pixels_removed": 215,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          201,
+          158,
+          145
+        ],
+        "robust_raw_lab": {
+          "L": 68.63,
+          "a": 14.0,
+          "b": 13.0
+        },
+        "temperature_strength_delta": -0.006
+      },
+      "quality": {
+        "image_confidence": 87.46,
+        "normalization_applied": true,
+        "hair_detected": false,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 705
+      },
+      "face_confidence": 0.928
+    },
+    {
+      "file": "normal_indoor_lightingg.jpg",
+      "current": {
+        "raw_rgb": [
+          163,
+          129,
+          105
+        ],
+        "normalized_rgb": [
+          167,
+          133,
+          109
+        ],
+        "lab": {
+          "L": 58.04,
+          "a": 10.0,
+          "b": 18.0
+        },
+        "temperature_strength": 0.599,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Moderate"
+      },
+      "robust": {
+        "normalized_rgb": [
+          156,
+          121,
+          98
+        ],
+        "lab": {
+          "L": 53.73,
+          "a": 10.0,
+          "b": 18.0
+        },
+        "hue": 24.0,
+        "chroma": 20.59,
+        "temperature_strength": 0.599,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Moderate"
+      },
+      "experiment": {
+        "total_cheek_pixels": 616,
+        "pixels_after_trim": 393,
+        "pixels_removed": 223,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          140,
+          107,
+          84
+        ],
+        "robust_raw_lab": {
+          "L": 47.84,
+          "a": 10.0,
+          "b": 18.0
+        },
+        "temperature_strength_delta": 0.0
+      },
+      "quality": {
+        "image_confidence": 97.67,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 616
+      },
+      "face_confidence": 0.9667
+    },
+    {
+      "file": "Outdoor lighting.webp",
+      "current": {
+        "raw_rgb": [
+          181,
+          139,
+          117
+        ],
+        "normalized_rgb": [
+          179,
+          137,
+          115
+        ],
+        "lab": {
+          "L": 60.78,
+          "a": 13.0,
+          "b": 18.0
+        },
+        "temperature_strength": 0.634,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Moderate"
+      },
+      "robust": {
+        "normalized_rgb": [
+          177,
+          137,
+          115
+        ],
+        "lab": {
+          "L": 60.39,
+          "a": 12.0,
+          "b": 18.0
+        },
+        "hue": 22.0,
+        "chroma": 21.63,
+        "temperature_strength": 0.622,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Moderate"
+      },
+      "experiment": {
+        "total_cheek_pixels": 440,
+        "pixels_after_trim": 369,
+        "pixels_removed": 71,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          179,
+          139,
+          117
+        ],
+        "robust_raw_lab": {
+          "L": 61.18,
+          "a": 12.0,
+          "b": 18.0
+        },
+        "temperature_strength_delta": -0.012
+      },
+      "quality": {
+        "image_confidence": 97.57,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 440
+      },
+      "face_confidence": 0.9653
+    },
+    {
+      "file": "Slightly different angle.webp",
+      "current": {
+        "raw_rgb": [
+          223,
+          173,
+          147
+        ],
+        "normalized_rgb": [
+          202,
+          153,
+          128
+        ],
+        "lab": {
+          "L": 67.45,
+          "a": 15.0,
+          "b": 20.0
+        },
+        "temperature_strength": 0.69,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Moderate"
+      },
+      "robust": {
+        "normalized_rgb": [
+          204,
+          154,
+          125
+        ],
+        "lab": {
+          "L": 67.45,
+          "a": 15.0,
+          "b": 22.0
+        },
+        "hue": 22.0,
+        "chroma": 26.63,
+        "temperature_strength": 0.721,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Moderate"
+      },
+      "experiment": {
+        "total_cheek_pixels": 394,
+        "pixels_after_trim": 308,
+        "pixels_removed": 86,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          226,
+          175,
+          146
+        ],
+        "robust_raw_lab": {
+          "L": 75.29,
+          "a": 15.5,
+          "b": 22.0
+        },
+        "temperature_strength_delta": 0.031
+      },
+      "quality": {
+        "image_confidence": 94.98,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 394
+      },
+      "face_confidence": 0.9283
+    },
+    {
+      "file": "with makeover.jpg",
+      "current": {
+        "raw_rgb": [
+          230,
+          150,
+          108
+        ],
+        "normalized_rgb": [
+          217,
+          138,
+          97
+        ],
+        "lab": {
+          "L": 64.71,
+          "a": 26.0,
+          "b": 34.0
+        },
+        "temperature_strength": 0.917,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Clear"
+      },
+      "robust": {
+        "normalized_rgb": [
+          222,
+          142,
+          99
+        ],
+        "lab": {
+          "L": 66.27,
+          "a": 26.0,
+          "b": 35.0
+        },
+        "hue": 20.0,
+        "chroma": 43.6,
+        "temperature_strength": 0.922,
+        "temperature": "Warm",
+        "season": "Warm Spring",
+        "saturation": "Clear"
+      },
+      "experiment": {
+        "total_cheek_pixels": 965,
+        "pixels_after_trim": 648,
+        "pixels_removed": 317,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          240,
+          159,
+          115
+        ],
+        "robust_raw_lab": {
+          "L": 72.55,
+          "a": 26.0,
+          "b": 35.0
+        },
+        "temperature_strength_delta": 0.005
+      },
+      "quality": {
+        "image_confidence": 95.39,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 965
+      },
+      "face_confidence": 0.9342
+    },
+    {
+      "file": "Without makeup.jpg",
+      "current": {
+        "raw_rgb": [
+          231,
+          196,
+          173
+        ],
+        "normalized_rgb": [
+          200,
+          166,
+          144
+        ],
+        "lab": {
+          "L": 70.59,
+          "a": 9.0,
+          "b": 16.0
+        },
+        "temperature_strength": 0.55,
+        "temperature": "Neutral",
+        "season": "Neutral",
+        "saturation": "Moderate"
+      },
+      "robust": {
+        "normalized_rgb": [
+          201,
+          167,
+          145
+        ],
+        "lab": {
+          "L": 70.98,
+          "a": 9.0,
+          "b": 16.0
+        },
+        "hue": 24.0,
+        "chroma": 18.36,
+        "temperature_strength": 0.55,
+        "temperature": "Neutral",
+        "season": "Neutral",
+        "saturation": "Moderate"
+      },
+      "experiment": {
+        "total_cheek_pixels": 270,
+        "pixels_after_trim": 201,
+        "pixels_removed": 69,
+        "trim_percent": 10,
+        "robust_raw_rgb": [
+          233,
+          198,
+          175
+        ],
+        "robust_raw_lab": {
+          "L": 82.35,
+          "a": 9.0,
+          "b": 16.0
+        },
+        "temperature_strength_delta": 0.0
+      },
+      "quality": {
+        "image_confidence": 92.84,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true,
+        "skin_pixels_analyzed": 270
+      },
+      "face_confidence": 0.9691
+    }
+  ],
+  "summary": {
+    "current_temperature_strength": {
+      "mean": 0.642,
+      "median": 0.599
+    },
+    "robust_temperature_strength": {
+      "mean": 0.645,
+      "median": 0.599
+    },
+    "temperature_strength_deltas": [
+      0.0,
+      -0.006,
+      0.0,
+      -0.012,
+      0.031,
+      0.005,
+      0.0
+    ],
+    "current_temperatures": [
+      "Neutral",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Neutral"
+    ],
+    "robust_temperatures": [
+      "Neutral",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Neutral"
+    ],
+    "current_seasons": [
+      "Neutral",
+      "Neutral",
+      "Warm Spring",
+      "Warm Spring",
+      "Warm Spring",
+      "Warm Spring",
+      "Neutral"
+    ],
+    "robust_seasons": [
+      "Neutral",
+      "Neutral",
+      "Warm Spring",
+      "Warm Spring",
+      "Warm Spring",
+      "Warm Spring",
+      "Neutral"
+    ]
+  },
+  "failures": []
+}

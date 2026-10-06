@@ -1,0 +1,72 @@
+{
+  "image_count": 7,
+  "successful": 7,
+  "failed": 0,
+  "success_rate": 100.0,
+  "dominant_season": "Warm Spring",
+  "season_consistency": 57.14,
+  "season_counts": {
+    "Neutral": 3,
+    "Warm Spring": 4
+  },
+  "temperature": {
+    "values": [
+      "Neutral",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Warm",
+      "Neutral"
+    ],
+    "strength_values": [
+      0.544,
+      0.562,
+      0.599,
+      0.634,
+      0.69,
+      0.917,
+      0.55
+    ],
+    "strength_mean": 0.6423,
+    "strength_median": 0.599,
+    "strength_range": 0.373
+  },
+  "saturation": [
+    "Moderate",
+    "Moderate",
+    "Moderate",
+    "Moderate",
+    "Moderate",
+    "Clear",
+    "Moderate"
+  ],
+  "contrast": [
+    "Moderate",
+    "Moderate",
+    "High",
+    "High",
+    "Moderate",
+    "High",
+    "High"
+  ],
+  "normalization_rate": 100.0,
+  "skin_lab": {
+    "L_mean": 64.93,
+    "L_median": 65.1,
+    "a_mean": 14.57,
+    "a_median": 13.0,
+    "b_mean": 18.71,
+    "b_median": 18.0,
+    "hue_mean": 19.14,
+    "hue_median": 20.0,
+    "chroma_mean": 23.92,
+    "chroma_median": 20.59
+  },
+  "recommendation_overlap": {
+    "clothing": 28.97,
+    "makeup": 66.84,
+    "accents": 77.78
+  },
+  "failures": []
+}

@@ -107,6 +107,12 @@ type AnalysisData = {
     accents: ColorRecommendation[];
   };
 
+  explanation?: {
+    profile: string;
+    why: string;
+    color_direction: string;
+  };
+
   normalization?: {
     enabled: boolean;
     method: string;
@@ -1764,6 +1770,50 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {analysis.explanation && (
+            <section className="mt-10 overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-900 text-white shadow-sm">
+              <div className="p-7 sm:p-9">
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="max-w-3xl">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
+                        <SparkleIcon />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
+                          Tinayu AI interpretation
+                        </p>
+                        <h2 className="mt-1 text-2xl font-semibold tracking-tight">
+                          Why this palette was suggested
+                        </h2>
+                      </div>
+                    </div>
+                    <p className="mt-6 text-sm leading-7 text-white/70">
+                      {analysis.explanation.profile}
+                    </p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium text-white/60">
+                    AI-assisted explanation
+                  </span>
+                </div>
+                <div className="mt-8 grid gap-4 md:grid-cols-2">
+                  <div className="rounded-2xl bg-white/5 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-white/40">Why</p>
+                    <p className="mt-3 text-sm leading-7 text-white/70">{analysis.explanation.why}</p>
+                  </div>
+                  <div className="rounded-2xl bg-white/5 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-white/40">Color direction</p>
+                    <p className="mt-3 text-sm leading-7 text-white/70">{analysis.explanation.color_direction}</p>
+                  </div>
+                </div>
+                <p className="mt-6 text-xs leading-5 text-white/35">
+                  This explanation is generated from Tinayu&apos;s detected color profile and recommendations.
+                  It is an AI-assisted interpretation, not a definitive personal color diagnosis.
+                </p>
+              </div>
+            </section>
+          )}
 
           <div className="mt-16">
             <div className="mb-8">

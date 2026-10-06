@@ -1,0 +1,1922 @@
+{
+  "samples": [
+    {
+      "sample": "Bright indoor",
+      "baseline": {
+        "L": 67.84,
+        "a": 16.0,
+        "b": 11.0,
+        "strength": 0.5436386872370789,
+        "temperature": "Neutral",
+        "band": "Neutral"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 16.0,
+          "b": 11.0,
+          "strength": 0.5436386872370789,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 15.5,
+          "b": 11.0,
+          "strength": 0.5374298453437496,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 16.5,
+          "b": 11.0,
+          "strength": 0.549833997312478,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 15.0,
+          "b": 11.0,
+          "strength": 0.5312093733737563,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 17.0,
+          "b": 11.0,
+          "strength": 0.5560138905446199,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 14.5,
+          "b": 11.0,
+          "strength": 0.52497918747894,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 17.5,
+          "b": 11.0,
+          "strength": 0.5621765008857981,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 14.0,
+          "b": 11.0,
+          "strength": 0.5187412158785352,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 18.0,
+          "b": 11.0,
+          "strength": 0.5683199834782481,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 16.0,
+          "b": 10.5,
+          "strength": 0.5343209436693046,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 16.0,
+          "b": 11.5,
+          "strength": 0.5529259881329059,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 16.0,
+          "b": 10.0,
+          "strength": 0.52497918747894,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 16.0,
+          "b": 12.0,
+          "strength": 0.5621765008857981,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 16.0,
+          "b": 9.5,
+          "strength": 0.5156199157230156,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 16.0,
+          "b": 12.5,
+          "strength": 0.5713839816769324,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 16.0,
+          "b": 9.0,
+          "strength": 0.5062496744995104,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 16.0,
+          "b": 13.0,
+          "strength": 0.5805423048206596,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 15.0,
+          "b": 10.0,
+          "strength": 0.5124973964842103,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 15.0,
+          "b": 12.0,
+          "strength": 0.549833997312478,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 17.0,
+          "b": 10.0,
+          "strength": 0.5374298453437496,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 17.0,
+          "b": 12.0,
+          "strength": 0.574442516811659,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 14.0,
+          "b": 9.0,
+          "strength": 0.4812587841214648,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 14.0,
+          "b": 13.0,
+          "strength": 0.5560138905446199,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 18.0,
+          "b": 9.0,
+          "strength": 0.5312093733737563,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 18.0,
+          "b": 13.0,
+          "strength": 0.6046790847140093,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": true
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 10,
+        "flip_rate": 0.4,
+        "min_strength": 0.4812587841214648,
+        "max_strength": 0.6046790847140093,
+        "strength_range": 0.12342030059254455,
+        "max_a_only_effect": 0.0248974713585437,
+        "max_b_only_effect": 0.03738901273756845
+      }
+    },
+    {
+      "sample": "Different camera",
+      "baseline": {
+        "L": 65.1,
+        "a": 13.0,
+        "b": 14.0,
+        "strength": 0.5621765008857981,
+        "temperature": "Warm",
+        "band": "Borderline Warm"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 13.0,
+          "b": 14.0,
+          "strength": 0.5621765008857981,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 12.5,
+          "b": 14.0,
+          "strength": 0.5560138905446199,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 13.5,
+          "b": 14.0,
+          "strength": 0.5683199834782481,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 12.0,
+          "b": 14.0,
+          "strength": 0.549833997312478,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 14.0,
+          "b": 14.0,
+          "strength": 0.574442516811659,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 11.5,
+          "b": 14.0,
+          "strength": 0.5436386872370789,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 14.5,
+          "b": 14.0,
+          "strength": 0.5805423048206596,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 11.0,
+          "b": 14.0,
+          "strength": 0.5374298453437496,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 15.0,
+          "b": 14.0,
+          "strength": 0.5866175789173301,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 13.0,
+          "b": 13.5,
+          "strength": 0.5529259881329059,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 13.0,
+          "b": 14.5,
+          "strength": 0.5713839816769324,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 13.0,
+          "b": 13.0,
+          "strength": 0.5436386872370789,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 13.0,
+          "b": 15.0,
+          "strength": 0.5805423048206596,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 13.0,
+          "b": 12.5,
+          "strength": 0.5343209436693046,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 13.0,
+          "b": 15.5,
+          "strength": 0.5896454785627312,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 13.0,
+          "b": 12.0,
+          "strength": 0.52497918747894,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 13.0,
+          "b": 16.0,
+          "strength": 0.598687660112452,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 12.0,
+          "b": 13.0,
+          "strength": 0.5312093733737563,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 12.0,
+          "b": 15.0,
+          "strength": 0.5683199834782481,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 14.0,
+          "b": 13.0,
+          "strength": 0.5560138905446199,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 14.0,
+          "b": 15.0,
+          "strength": 0.5926665999540698,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 11.0,
+          "b": 12.0,
+          "strength": 0.5,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 11.0,
+          "b": 16.0,
+          "strength": 0.574442516811659,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 15.0,
+          "b": 12.0,
+          "strength": 0.549833997312478,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 15.0,
+          "b": 16.0,
+          "strength": 0.6224593312018546,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 9,
+        "flip_rate": 0.36,
+        "min_strength": 0.5,
+        "max_strength": 0.6224593312018546,
+        "strength_range": 0.1224593312018546,
+        "max_a_only_effect": 0.024746655542048468,
+        "max_b_only_effect": 0.03719731340685806
+      }
+    },
+    {
+      "sample": "Outdoor",
+      "baseline": {
+        "L": 60.78,
+        "a": 13.0,
+        "b": 18.0,
+        "strength": 0.6341355910108007,
+        "temperature": "Warm",
+        "band": "Strong Warm"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 13.0,
+          "b": 18.0,
+          "strength": 0.6341355910108007,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 12.5,
+          "b": 18.0,
+          "strength": 0.6283161882953663,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 13.5,
+          "b": 18.0,
+          "strength": 0.6399160967377341,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 12.0,
+          "b": 18.0,
+          "strength": 0.6224593312018546,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 14.0,
+          "b": 18.0,
+          "strength": 0.6456563062257954,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 11.5,
+          "b": 18.0,
+          "strength": 0.6165665045213193,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 14.5,
+          "b": 18.0,
+          "strength": 0.6513548646660542,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 11.0,
+          "b": 18.0,
+          "strength": 0.610639233949222,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 15.0,
+          "b": 18.0,
+          "strength": 0.6570104626734988,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 13.0,
+          "b": 17.5,
+          "strength": 0.6253923497205511,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 13.0,
+          "b": 18.5,
+          "strength": 0.6427913242407762,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 13.0,
+          "b": 17.0,
+          "strength": 0.6165665045213193,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 13.0,
+          "b": 19.0,
+          "strength": 0.6513548646660542,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 13.0,
+          "b": 16.5,
+          "strength": 0.6076631698328917,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 13.0,
+          "b": 19.5,
+          "strength": 0.6598217549720575,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 13.0,
+          "b": 16.0,
+          "strength": 0.598687660112452,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 13.0,
+          "b": 20.0,
+          "strength": 0.6681877721681662,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 12.0,
+          "b": 17.0,
+          "strength": 0.6046790847140093,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 12.0,
+          "b": 19.0,
+          "strength": 0.6399160967377341,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 14.0,
+          "b": 17.0,
+          "strength": 0.6283161882953663,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 14.0,
+          "b": 19.0,
+          "strength": 0.6626218371700825,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 11.0,
+          "b": 16.0,
+          "strength": 0.574442516811659,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 11.0,
+          "b": 20.0,
+          "strength": 0.6456563062257954,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 15.0,
+          "b": 16.0,
+          "strength": 0.6224593312018546,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 15.0,
+          "b": 20.0,
+          "strength": 0.6899744811276125,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 0,
+        "flip_rate": 0.0,
+        "min_strength": 0.574442516811659,
+        "max_strength": 0.6899744811276125,
+        "strength_range": 0.11553196431595347,
+        "max_a_only_effect": 0.02349635706157871,
+        "max_b_only_effect": 0.035447930898348745
+      }
+    },
+    {
+      "sample": "Slightly different angle",
+      "baseline": {
+        "L": 67.45,
+        "a": 15.0,
+        "b": 20.0,
+        "strength": 0.6899744811276125,
+        "temperature": "Warm",
+        "band": "Strong Warm"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 15.0,
+          "b": 20.0,
+          "strength": 0.6899744811276125,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 14.5,
+          "b": 20.0,
+          "strength": 0.6846015003234307,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 15.5,
+          "b": 20.0,
+          "strength": 0.6952966693475653,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 14.0,
+          "b": 20.0,
+          "strength": 0.679178699175393,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 16.0,
+          "b": 20.0,
+          "strength": 0.7005671424739729,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 13.5,
+          "b": 20.0,
+          "strength": 0.6737070994545215,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 16.5,
+          "b": 20.0,
+          "strength": 0.7057850278370112,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 13.0,
+          "b": 20.0,
+          "strength": 0.6681877721681662,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 17.0,
+          "b": 20.0,
+          "strength": 0.7109495026250039,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 15.0,
+          "b": 19.5,
+          "strength": 0.6818962645895934,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 15.0,
+          "b": 20.5,
+          "strength": 0.6979384260080908,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 15.0,
+          "b": 19.0,
+          "strength": 0.6737070994545215,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 15.0,
+          "b": 21.0,
+          "strength": 0.7057850278370112,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 15.0,
+          "b": 18.5,
+          "strength": 0.665410558746814,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 15.0,
+          "b": 21.5,
+          "strength": 0.713511467542637,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 15.0,
+          "b": 18.0,
+          "strength": 0.6570104626734988,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 15.0,
+          "b": 22.0,
+          "strength": 0.7211151780228631,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 14.0,
+          "b": 19.0,
+          "strength": 0.6626218371700825,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 14.0,
+          "b": 21.0,
+          "strength": 0.6952966693475654,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 16.0,
+          "b": 19.0,
+          "strength": 0.6846015003234307,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 16.0,
+          "b": 21.0,
+          "strength": 0.7160597938157098,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 13.0,
+          "b": 18.0,
+          "strength": 0.6341355910108007,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 13.0,
+          "b": 22.0,
+          "strength": 0.7005671424739729,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 17.0,
+          "b": 18.0,
+          "strength": 0.679178699175393,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 17.0,
+          "b": 22.0,
+          "strength": 0.740774899182154,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 0,
+        "flip_rate": 0.0,
+        "min_strength": 0.6341355910108007,
+        "max_strength": 0.740774899182154,
+        "strength_range": 0.10663930817135325,
+        "max_a_only_effect": 0.021786708959446344,
+        "max_b_only_effect": 0.032964018454113675
+      }
+    },
+    {
+      "sample": "Without makeup",
+      "baseline": {
+        "L": 70.59,
+        "a": 9.0,
+        "b": 16.0,
+        "strength": 0.549833997312478,
+        "temperature": "Neutral",
+        "band": "Neutral"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 9.0,
+          "b": 16.0,
+          "strength": 0.549833997312478,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 8.5,
+          "b": 16.0,
+          "strength": 0.5436386872370789,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 9.5,
+          "b": 16.0,
+          "strength": 0.5560138905446199,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 8.0,
+          "b": 16.0,
+          "strength": 0.5374298453437496,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 10.0,
+          "b": 16.0,
+          "strength": 0.5621765008857981,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 7.5,
+          "b": 16.0,
+          "strength": 0.5312093733737563,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 10.5,
+          "b": 16.0,
+          "strength": 0.5683199834782481,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 7.0,
+          "b": 16.0,
+          "strength": 0.5249791874789399,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 11.0,
+          "b": 16.0,
+          "strength": 0.574442516811659,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 9.0,
+          "b": 15.5,
+          "strength": 0.5405358392737893,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 9.0,
+          "b": 16.5,
+          "strength": 0.559097471902393,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 9.0,
+          "b": 15.0,
+          "strength": 0.5312093733737563,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 9.0,
+          "b": 17.0,
+          "strength": 0.5683199834782481,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 9.0,
+          "b": 14.5,
+          "strength": 0.5218610539716015,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 9.0,
+          "b": 17.5,
+          "strength": 0.5774953651858118,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 9.0,
+          "b": 14.0,
+          "strength": 0.5124973964842103,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 9.0,
+          "b": 18.0,
+          "strength": 0.5866175789173301,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 8.0,
+          "b": 15.0,
+          "strength": 0.5187412158785352,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 8.0,
+          "b": 17.0,
+          "strength": 0.5560138905446199,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 10.0,
+          "b": 15.0,
+          "strength": 0.5436386872370789,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 10.0,
+          "b": 17.0,
+          "strength": 0.5805423048206596,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 7.0,
+          "b": 14.0,
+          "strength": 0.4875026035157896,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 7.0,
+          "b": 18.0,
+          "strength": 0.5621765008857981,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": true
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 11.0,
+          "b": 14.0,
+          "strength": 0.5374298453437496,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 11.0,
+          "b": 18.0,
+          "strength": 0.610639233949222,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": true
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 12,
+        "flip_rate": 0.48,
+        "min_strength": 0.4875026035157896,
+        "max_strength": 0.610639233949222,
+        "strength_range": 0.12313663043343243,
+        "max_a_only_effect": 0.02485480983353805,
+        "max_b_only_effect": 0.03733660082826762
+      }
+    },
+    {
+      "sample": "Normal indoor",
+      "baseline": {
+        "L": 58.04,
+        "a": 10.0,
+        "b": 18.0,
+        "strength": 0.598687660112452,
+        "temperature": "Warm",
+        "band": "Strong Warm"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 10.0,
+          "b": 18.0,
+          "strength": 0.598687660112452,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 9.5,
+          "b": 18.0,
+          "strength": 0.5926665999540697,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 10.5,
+          "b": 18.0,
+          "strength": 0.6046790847140093,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 9.0,
+          "b": 18.0,
+          "strength": 0.5866175789173301,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 11.0,
+          "b": 18.0,
+          "strength": 0.610639233949222,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 8.5,
+          "b": 18.0,
+          "strength": 0.5805423048206596,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 11.5,
+          "b": 18.0,
+          "strength": 0.6165665045213193,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 8.0,
+          "b": 18.0,
+          "strength": 0.574442516811659,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 12.0,
+          "b": 18.0,
+          "strength": 0.6224593312018546,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 10.0,
+          "b": 17.5,
+          "strength": 0.5896454785627312,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 10.0,
+          "b": 18.5,
+          "strength": 0.6076631698328917,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 10.0,
+          "b": 17.0,
+          "strength": 0.5805423048206596,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 10.0,
+          "b": 19.0,
+          "strength": 0.6165665045213193,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 10.0,
+          "b": 16.5,
+          "strength": 0.5713839816769324,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 10.0,
+          "b": 19.5,
+          "strength": 0.6253923497205511,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 10.0,
+          "b": 16.0,
+          "strength": 0.5621765008857981,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 10.0,
+          "b": 20.0,
+          "strength": 0.6341355910108007,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 9.0,
+          "b": 17.0,
+          "strength": 0.5683199834782481,
+          "temperature": "Warm",
+          "band": "Borderline Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 9.0,
+          "b": 19.0,
+          "strength": 0.6046790847140093,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 11.0,
+          "b": 17.0,
+          "strength": 0.5926665999540697,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 11.0,
+          "b": 19.0,
+          "strength": 0.6283161882953663,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 8.0,
+          "b": 16.0,
+          "strength": 0.5374298453437496,
+          "temperature": "Neutral",
+          "band": "Neutral",
+          "classification_changed": true
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 8.0,
+          "b": 20.0,
+          "strength": 0.610639233949222,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 12.0,
+          "b": 16.0,
+          "strength": 0.5866175789173301,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 12.0,
+          "b": 20.0,
+          "strength": 0.6570104626734988,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 1,
+        "flip_rate": 0.04,
+        "min_strength": 0.5374298453437496,
+        "max_strength": 0.6570104626734988,
+        "strength_range": 0.11958061732974923,
+        "max_a_only_effect": 0.02424514330079297,
+        "max_b_only_effect": 0.03651115922665393
+      }
+    },
+    {
+      "sample": "Makeover",
+      "baseline": {
+        "L": 64.71,
+        "a": 26.0,
+        "b": 34.0,
+        "strength": 0.9168273035060777,
+        "temperature": "Warm",
+        "band": "Strong Warm"
+      },
+      "perturbations": [
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.0,
+          "a": 26.0,
+          "b": 34.0,
+          "strength": 0.9168273035060777,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -0.5,
+          "delta_b": 0.0,
+          "a": 25.5,
+          "b": 34.0,
+          "strength": 0.9149009549929797,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.5,
+          "delta_b": 0.0,
+          "a": 26.5,
+          "b": 34.0,
+          "strength": 0.918713920386427,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 0.0,
+          "a": 25.0,
+          "b": 34.0,
+          "strength": 0.9129342275597286,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 0.0,
+          "a": 27.0,
+          "b": 34.0,
+          "strength": 0.9205614508160216,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.5,
+          "delta_b": 0.0,
+          "a": 24.5,
+          "b": 34.0,
+          "strength": 0.9109264722644368,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.5,
+          "delta_b": 0.0,
+          "a": 27.5,
+          "b": 34.0,
+          "strength": 0.9223705374435115,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 0.0,
+          "a": 24.0,
+          "b": 34.0,
+          "strength": 0.9088770389851438,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 0.0,
+          "a": 28.0,
+          "b": 34.0,
+          "strength": 0.9241418199787566,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -0.5,
+          "a": 26.0,
+          "b": 33.5,
+          "strength": 0.9139226791669082,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 0.5,
+          "a": 26.0,
+          "b": 34.5,
+          "strength": 0.9196425311777929,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.0,
+          "a": 26.0,
+          "b": 33.0,
+          "strength": 0.9109264722644368,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.0,
+          "a": 26.0,
+          "b": 35.0,
+          "strength": 0.9223705374435115,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -1.5,
+          "a": 26.0,
+          "b": 32.5,
+          "strength": 0.9078364897378534,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 1.5,
+          "a": 26.0,
+          "b": 35.5,
+          "strength": 0.9250134837227268,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": -2.0,
+          "a": 26.0,
+          "b": 32.0,
+          "strength": 0.9046505351008906,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 0.0,
+          "delta_b": 2.0,
+          "a": 26.0,
+          "b": 36.0,
+          "strength": 0.9275735146384823,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": -1.0,
+          "a": 25.0,
+          "b": 33.0,
+          "strength": 0.9067852769181763,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -1.0,
+          "delta_b": 1.0,
+          "a": 25.0,
+          "b": 35.0,
+          "strength": 0.918713920386427,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": -1.0,
+          "a": 27.0,
+          "b": 33.0,
+          "strength": 0.9149009549929797,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 1.0,
+          "delta_b": 1.0,
+          "a": 27.0,
+          "b": 35.0,
+          "strength": 0.9258759348093368,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": -2.0,
+          "a": 24.0,
+          "b": 32.0,
+          "strength": 0.8956687768809987,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": -2.0,
+          "delta_b": 2.0,
+          "a": 24.0,
+          "b": 36.0,
+          "strength": 0.9205614508160216,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": -2.0,
+          "a": 28.0,
+          "b": 32.0,
+          "strength": 0.9129342275597286,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        },
+        {
+          "delta_a": 2.0,
+          "delta_b": 2.0,
+          "a": 28.0,
+          "b": 36.0,
+          "strength": 0.9340109905087812,
+          "temperature": "Warm",
+          "band": "Strong Warm",
+          "classification_changed": false
+        }
+      ],
+      "summary": {
+        "total_tests": 25,
+        "classification_flips": 0,
+        "flip_rate": 0.0,
+        "min_strength": 0.8956687768809987,
+        "max_strength": 0.9340109905087812,
+        "strength_range": 0.03834221362778256,
+        "max_a_only_effect": 0.007950264520933836,
+        "max_b_only_effect": 0.01217676840518711
+      }
+    }
+  ],
+  "global_summary": {
+    "sample_count": 7,
+    "perturbations_per_sample": 25,
+    "total_tests": 175,
+    "total_flips": 32,
+    "overall_flip_rate": 0.18285714285714286
+  }
+}

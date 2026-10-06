@@ -1,0 +1,2083 @@
+{
+  "sample_count": 7,
+  "perturbations_per_sample": 25,
+  "total_measurements": 175,
+  "schemes": {
+    "CURRENT": {
+      "summary": {
+        "counts": {
+          "Neutral": 38,
+          "Warm": 137
+        },
+        "total": 175
+      },
+      "per_sample": {
+        "Bright indoor": {
+          "baseline_score": 0.5436386872370789,
+          "baseline_label": "Neutral",
+          "label_counts": {
+            "Neutral": 15,
+            "Warm": 10
+          },
+          "classification_changes": 10,
+          "change_rate": 0.4
+        },
+        "Different camera": {
+          "baseline_score": 0.5621765008857981,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 16,
+            "Neutral": 9
+          },
+          "classification_changes": 9,
+          "change_rate": 0.36
+        },
+        "Outdoor": {
+          "baseline_score": 0.6341355910108007,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        },
+        "Slightly different angle": {
+          "baseline_score": 0.6899744811276125,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        },
+        "Without makeup": {
+          "baseline_score": 0.549833997312478,
+          "baseline_label": "Neutral",
+          "label_counts": {
+            "Neutral": 13,
+            "Warm": 12
+          },
+          "classification_changes": 12,
+          "change_rate": 0.48
+        },
+        "Normal indoor": {
+          "baseline_score": 0.598687660112452,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 24,
+            "Neutral": 1
+          },
+          "classification_changes": 1,
+          "change_rate": 0.04
+        },
+        "Makeover": {
+          "baseline_score": 0.9168273035060777,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        }
+      }
+    },
+    "CANDIDATE_A_EXISTING_BANDS": {
+      "summary": {
+        "counts": {
+          "Neutral": 38,
+          "Borderline Warm": 31,
+          "Strong Warm": 106
+        },
+        "total": 175
+      },
+      "per_sample": {
+        "Bright indoor": {
+          "baseline_score": 0.5436386872370789,
+          "baseline_label": "Neutral",
+          "label_counts": {
+            "Neutral": 15,
+            "Borderline Warm": 8,
+            "Strong Warm": 2
+          },
+          "classification_changes": 10,
+          "change_rate": 0.4
+        },
+        "Different camera": {
+          "baseline_score": 0.5621765008857981,
+          "baseline_label": "Borderline Warm",
+          "label_counts": {
+            "Borderline Warm": 9,
+            "Neutral": 9,
+            "Strong Warm": 7
+          },
+          "classification_changes": 16,
+          "change_rate": 0.64
+        },
+        "Outdoor": {
+          "baseline_score": 0.6341355910108007,
+          "baseline_label": "Strong Warm",
+          "label_counts": {
+            "Strong Warm": 24,
+            "Borderline Warm": 1
+          },
+          "classification_changes": 1,
+          "change_rate": 0.04
+        },
+        "Slightly different angle": {
+          "baseline_score": 0.6899744811276125,
+          "baseline_label": "Strong Warm",
+          "label_counts": {
+            "Strong Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        },
+        "Without makeup": {
+          "baseline_score": 0.549833997312478,
+          "baseline_label": "Neutral",
+          "label_counts": {
+            "Neutral": 13,
+            "Borderline Warm": 9,
+            "Strong Warm": 3
+          },
+          "classification_changes": 12,
+          "change_rate": 0.48
+        },
+        "Normal indoor": {
+          "baseline_score": 0.598687660112452,
+          "baseline_label": "Strong Warm",
+          "label_counts": {
+            "Strong Warm": 20,
+            "Borderline Warm": 4,
+            "Neutral": 1
+          },
+          "classification_changes": 5,
+          "change_rate": 0.2
+        },
+        "Makeover": {
+          "baseline_score": 0.9168273035060777,
+          "baseline_label": "Strong Warm",
+          "label_counts": {
+            "Strong Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        }
+      }
+    },
+    "CANDIDATE_B_WIDER_BORDERLINE": {
+      "summary": {
+        "counts": {
+          "Borderline": 73,
+          "Cool/Neutral": 14,
+          "Warm": 88
+        },
+        "total": 175
+      },
+      "per_sample": {
+        "Bright indoor": {
+          "baseline_score": 0.5436386872370789,
+          "baseline_label": "Borderline",
+          "label_counts": {
+            "Borderline": 17,
+            "Cool/Neutral": 7,
+            "Warm": 1
+          },
+          "classification_changes": 8,
+          "change_rate": 0.32
+        },
+        "Different camera": {
+          "baseline_score": 0.5621765008857981,
+          "baseline_label": "Borderline",
+          "label_counts": {
+            "Borderline": 22,
+            "Cool/Neutral": 2,
+            "Warm": 1
+          },
+          "classification_changes": 3,
+          "change_rate": 0.12
+        },
+        "Outdoor": {
+          "baseline_score": 0.6341355910108007,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 23,
+            "Borderline": 2
+          },
+          "classification_changes": 2,
+          "change_rate": 0.08
+        },
+        "Slightly different angle": {
+          "baseline_score": 0.6899744811276125,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        },
+        "Without makeup": {
+          "baseline_score": 0.549833997312478,
+          "baseline_label": "Borderline",
+          "label_counts": {
+            "Borderline": 19,
+            "Cool/Neutral": 5,
+            "Warm": 1
+          },
+          "classification_changes": 6,
+          "change_rate": 0.24
+        },
+        "Normal indoor": {
+          "baseline_score": 0.598687660112452,
+          "baseline_label": "Borderline",
+          "label_counts": {
+            "Borderline": 13,
+            "Warm": 12
+          },
+          "classification_changes": 12,
+          "change_rate": 0.48
+        },
+        "Makeover": {
+          "baseline_score": 0.9168273035060777,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        }
+      }
+    },
+    "CANDIDATE_C_CONSERVATIVE_WARM": {
+      "summary": {
+        "counts": {
+          "Neutral/Borderline": 69,
+          "Warm": 106
+        },
+        "total": 175
+      },
+      "per_sample": {
+        "Bright indoor": {
+          "baseline_score": 0.5436386872370789,
+          "baseline_label": "Neutral/Borderline",
+          "label_counts": {
+            "Neutral/Borderline": 23,
+            "Warm": 2
+          },
+          "classification_changes": 2,
+          "change_rate": 0.08
+        },
+        "Different camera": {
+          "baseline_score": 0.5621765008857981,
+          "baseline_label": "Neutral/Borderline",
+          "label_counts": {
+            "Neutral/Borderline": 18,
+            "Warm": 7
+          },
+          "classification_changes": 7,
+          "change_rate": 0.28
+        },
+        "Outdoor": {
+          "baseline_score": 0.6341355910108007,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 24,
+            "Neutral/Borderline": 1
+          },
+          "classification_changes": 1,
+          "change_rate": 0.04
+        },
+        "Slightly different angle": {
+          "baseline_score": 0.6899744811276125,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        },
+        "Without makeup": {
+          "baseline_score": 0.549833997312478,
+          "baseline_label": "Neutral/Borderline",
+          "label_counts": {
+            "Neutral/Borderline": 22,
+            "Warm": 3
+          },
+          "classification_changes": 3,
+          "change_rate": 0.12
+        },
+        "Normal indoor": {
+          "baseline_score": 0.598687660112452,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 20,
+            "Neutral/Borderline": 5
+          },
+          "classification_changes": 5,
+          "change_rate": 0.2
+        },
+        "Makeover": {
+          "baseline_score": 0.9168273035060777,
+          "baseline_label": "Warm",
+          "label_counts": {
+            "Warm": 25
+          },
+          "classification_changes": 0,
+          "change_rate": 0.0
+        }
+      }
+    }
+  },
+  "raw_measurements": [
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 16.0,
+      "b": 11.0,
+      "score": 0.5436386872370789
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 15.5,
+      "b": 11.0,
+      "score": 0.5374298453437496
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 16.5,
+      "b": 11.0,
+      "score": 0.549833997312478
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 15.0,
+      "b": 11.0,
+      "score": 0.5312093733737563
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 17.0,
+      "b": 11.0,
+      "score": 0.5560138905446199
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 14.5,
+      "b": 11.0,
+      "score": 0.52497918747894
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 17.5,
+      "b": 11.0,
+      "score": 0.5621765008857981
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 14.0,
+      "b": 11.0,
+      "score": 0.5187412158785352
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 18.0,
+      "b": 11.0,
+      "score": 0.5683199834782481
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 16.0,
+      "b": 10.5,
+      "score": 0.5343209436693046
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 16.0,
+      "b": 11.5,
+      "score": 0.5529259881329059
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 16.0,
+      "b": 10.0,
+      "score": 0.52497918747894
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 16.0,
+      "b": 12.0,
+      "score": 0.5621765008857981
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 16.0,
+      "b": 9.5,
+      "score": 0.5156199157230156
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 16.0,
+      "b": 12.5,
+      "score": 0.5713839816769324
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 16.0,
+      "b": 9.0,
+      "score": 0.5062496744995104
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 16.0,
+      "b": 13.0,
+      "score": 0.5805423048206596
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 15.0,
+      "b": 10.0,
+      "score": 0.5124973964842103
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 15.0,
+      "b": 12.0,
+      "score": 0.549833997312478
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 17.0,
+      "b": 10.0,
+      "score": 0.5374298453437496
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 17.0,
+      "b": 12.0,
+      "score": 0.574442516811659
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 14.0,
+      "b": 9.0,
+      "score": 0.4812587841214648
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 14.0,
+      "b": 13.0,
+      "score": 0.5560138905446199
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 18.0,
+      "b": 9.0,
+      "score": 0.5312093733737563
+    },
+    {
+      "sample": "Bright indoor",
+      "base_a": 16.0,
+      "base_b": 11.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 18.0,
+      "b": 13.0,
+      "score": 0.6046790847140093
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 13.0,
+      "b": 14.0,
+      "score": 0.5621765008857981
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 12.5,
+      "b": 14.0,
+      "score": 0.5560138905446199
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 13.5,
+      "b": 14.0,
+      "score": 0.5683199834782481
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 12.0,
+      "b": 14.0,
+      "score": 0.549833997312478
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 14.0,
+      "b": 14.0,
+      "score": 0.574442516811659
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 11.5,
+      "b": 14.0,
+      "score": 0.5436386872370789
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 14.5,
+      "b": 14.0,
+      "score": 0.5805423048206596
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 11.0,
+      "b": 14.0,
+      "score": 0.5374298453437496
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 15.0,
+      "b": 14.0,
+      "score": 0.5866175789173301
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 13.0,
+      "b": 13.5,
+      "score": 0.5529259881329059
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 13.0,
+      "b": 14.5,
+      "score": 0.5713839816769324
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 13.0,
+      "b": 13.0,
+      "score": 0.5436386872370789
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 13.0,
+      "b": 15.0,
+      "score": 0.5805423048206596
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 13.0,
+      "b": 12.5,
+      "score": 0.5343209436693046
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 13.0,
+      "b": 15.5,
+      "score": 0.5896454785627312
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 13.0,
+      "b": 12.0,
+      "score": 0.52497918747894
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 13.0,
+      "b": 16.0,
+      "score": 0.598687660112452
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 12.0,
+      "b": 13.0,
+      "score": 0.5312093733737563
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 12.0,
+      "b": 15.0,
+      "score": 0.5683199834782481
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 14.0,
+      "b": 13.0,
+      "score": 0.5560138905446199
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 14.0,
+      "b": 15.0,
+      "score": 0.5926665999540698
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 11.0,
+      "b": 12.0,
+      "score": 0.5
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 11.0,
+      "b": 16.0,
+      "score": 0.574442516811659
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 15.0,
+      "b": 12.0,
+      "score": 0.549833997312478
+    },
+    {
+      "sample": "Different camera",
+      "base_a": 13.0,
+      "base_b": 14.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 15.0,
+      "b": 16.0,
+      "score": 0.6224593312018546
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 13.0,
+      "b": 18.0,
+      "score": 0.6341355910108007
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 12.5,
+      "b": 18.0,
+      "score": 0.6283161882953663
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 13.5,
+      "b": 18.0,
+      "score": 0.6399160967377341
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 12.0,
+      "b": 18.0,
+      "score": 0.6224593312018546
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 14.0,
+      "b": 18.0,
+      "score": 0.6456563062257954
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 11.5,
+      "b": 18.0,
+      "score": 0.6165665045213193
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 14.5,
+      "b": 18.0,
+      "score": 0.6513548646660542
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 11.0,
+      "b": 18.0,
+      "score": 0.610639233949222
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 15.0,
+      "b": 18.0,
+      "score": 0.6570104626734988
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 13.0,
+      "b": 17.5,
+      "score": 0.6253923497205511
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 13.0,
+      "b": 18.5,
+      "score": 0.6427913242407762
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 13.0,
+      "b": 17.0,
+      "score": 0.6165665045213193
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 13.0,
+      "b": 19.0,
+      "score": 0.6513548646660542
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 13.0,
+      "b": 16.5,
+      "score": 0.6076631698328917
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 13.0,
+      "b": 19.5,
+      "score": 0.6598217549720575
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 13.0,
+      "b": 16.0,
+      "score": 0.598687660112452
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 13.0,
+      "b": 20.0,
+      "score": 0.6681877721681662
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 12.0,
+      "b": 17.0,
+      "score": 0.6046790847140093
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 12.0,
+      "b": 19.0,
+      "score": 0.6399160967377341
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 14.0,
+      "b": 17.0,
+      "score": 0.6283161882953663
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 14.0,
+      "b": 19.0,
+      "score": 0.6626218371700825
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 11.0,
+      "b": 16.0,
+      "score": 0.574442516811659
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 11.0,
+      "b": 20.0,
+      "score": 0.6456563062257954
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 15.0,
+      "b": 16.0,
+      "score": 0.6224593312018546
+    },
+    {
+      "sample": "Outdoor",
+      "base_a": 13.0,
+      "base_b": 18.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 15.0,
+      "b": 20.0,
+      "score": 0.6899744811276125
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 15.0,
+      "b": 20.0,
+      "score": 0.6899744811276125
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 14.5,
+      "b": 20.0,
+      "score": 0.6846015003234307
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 15.5,
+      "b": 20.0,
+      "score": 0.6952966693475653
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 14.0,
+      "b": 20.0,
+      "score": 0.679178699175393
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 16.0,
+      "b": 20.0,
+      "score": 0.7005671424739729
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 13.5,
+      "b": 20.0,
+      "score": 0.6737070994545215
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 16.5,
+      "b": 20.0,
+      "score": 0.7057850278370112
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 13.0,
+      "b": 20.0,
+      "score": 0.6681877721681662
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 17.0,
+      "b": 20.0,
+      "score": 0.7109495026250039
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 15.0,
+      "b": 19.5,
+      "score": 0.6818962645895934
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 15.0,
+      "b": 20.5,
+      "score": 0.6979384260080908
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 15.0,
+      "b": 19.0,
+      "score": 0.6737070994545215
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 15.0,
+      "b": 21.0,
+      "score": 0.7057850278370112
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 15.0,
+      "b": 18.5,
+      "score": 0.665410558746814
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 15.0,
+      "b": 21.5,
+      "score": 0.713511467542637
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 15.0,
+      "b": 18.0,
+      "score": 0.6570104626734988
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 15.0,
+      "b": 22.0,
+      "score": 0.7211151780228631
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 14.0,
+      "b": 19.0,
+      "score": 0.6626218371700825
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 14.0,
+      "b": 21.0,
+      "score": 0.6952966693475654
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 16.0,
+      "b": 19.0,
+      "score": 0.6846015003234307
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 16.0,
+      "b": 21.0,
+      "score": 0.7160597938157098
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 13.0,
+      "b": 18.0,
+      "score": 0.6341355910108007
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 13.0,
+      "b": 22.0,
+      "score": 0.7005671424739729
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 17.0,
+      "b": 18.0,
+      "score": 0.679178699175393
+    },
+    {
+      "sample": "Slightly different angle",
+      "base_a": 15.0,
+      "base_b": 20.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 17.0,
+      "b": 22.0,
+      "score": 0.740774899182154
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 9.0,
+      "b": 16.0,
+      "score": 0.549833997312478
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 8.5,
+      "b": 16.0,
+      "score": 0.5436386872370789
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 9.5,
+      "b": 16.0,
+      "score": 0.5560138905446199
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 8.0,
+      "b": 16.0,
+      "score": 0.5374298453437496
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 10.0,
+      "b": 16.0,
+      "score": 0.5621765008857981
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 7.5,
+      "b": 16.0,
+      "score": 0.5312093733737563
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 10.5,
+      "b": 16.0,
+      "score": 0.5683199834782481
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 7.0,
+      "b": 16.0,
+      "score": 0.5249791874789399
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 11.0,
+      "b": 16.0,
+      "score": 0.574442516811659
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 9.0,
+      "b": 15.5,
+      "score": 0.5405358392737893
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 9.0,
+      "b": 16.5,
+      "score": 0.559097471902393
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 9.0,
+      "b": 15.0,
+      "score": 0.5312093733737563
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 9.0,
+      "b": 17.0,
+      "score": 0.5683199834782481
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 9.0,
+      "b": 14.5,
+      "score": 0.5218610539716015
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 9.0,
+      "b": 17.5,
+      "score": 0.5774953651858118
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 9.0,
+      "b": 14.0,
+      "score": 0.5124973964842103
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 9.0,
+      "b": 18.0,
+      "score": 0.5866175789173301
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 8.0,
+      "b": 15.0,
+      "score": 0.5187412158785352
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 8.0,
+      "b": 17.0,
+      "score": 0.5560138905446199
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 10.0,
+      "b": 15.0,
+      "score": 0.5436386872370789
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 10.0,
+      "b": 17.0,
+      "score": 0.5805423048206596
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 7.0,
+      "b": 14.0,
+      "score": 0.4875026035157896
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 7.0,
+      "b": 18.0,
+      "score": 0.5621765008857981
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 11.0,
+      "b": 14.0,
+      "score": 0.5374298453437496
+    },
+    {
+      "sample": "Without makeup",
+      "base_a": 9.0,
+      "base_b": 16.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 11.0,
+      "b": 18.0,
+      "score": 0.610639233949222
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 10.0,
+      "b": 18.0,
+      "score": 0.598687660112452
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 9.5,
+      "b": 18.0,
+      "score": 0.5926665999540697
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 10.5,
+      "b": 18.0,
+      "score": 0.6046790847140093
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 9.0,
+      "b": 18.0,
+      "score": 0.5866175789173301
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 11.0,
+      "b": 18.0,
+      "score": 0.610639233949222
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 8.5,
+      "b": 18.0,
+      "score": 0.5805423048206596
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 11.5,
+      "b": 18.0,
+      "score": 0.6165665045213193
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 8.0,
+      "b": 18.0,
+      "score": 0.574442516811659
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 12.0,
+      "b": 18.0,
+      "score": 0.6224593312018546
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 10.0,
+      "b": 17.5,
+      "score": 0.5896454785627312
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 10.0,
+      "b": 18.5,
+      "score": 0.6076631698328917
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 10.0,
+      "b": 17.0,
+      "score": 0.5805423048206596
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 10.0,
+      "b": 19.0,
+      "score": 0.6165665045213193
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 10.0,
+      "b": 16.5,
+      "score": 0.5713839816769324
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 10.0,
+      "b": 19.5,
+      "score": 0.6253923497205511
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 10.0,
+      "b": 16.0,
+      "score": 0.5621765008857981
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 10.0,
+      "b": 20.0,
+      "score": 0.6341355910108007
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 9.0,
+      "b": 17.0,
+      "score": 0.5683199834782481
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 9.0,
+      "b": 19.0,
+      "score": 0.6046790847140093
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 11.0,
+      "b": 17.0,
+      "score": 0.5926665999540697
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 11.0,
+      "b": 19.0,
+      "score": 0.6283161882953663
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 8.0,
+      "b": 16.0,
+      "score": 0.5374298453437496
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 8.0,
+      "b": 20.0,
+      "score": 0.610639233949222
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 12.0,
+      "b": 16.0,
+      "score": 0.5866175789173301
+    },
+    {
+      "sample": "Normal indoor",
+      "base_a": 10.0,
+      "base_b": 18.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 12.0,
+      "b": 20.0,
+      "score": 0.6570104626734988
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": 0.0,
+      "a": 26.0,
+      "b": 34.0,
+      "score": 0.9168273035060777
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -0.5,
+      "delta_b": 0.0,
+      "a": 25.5,
+      "b": 34.0,
+      "score": 0.9149009549929797
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.5,
+      "delta_b": 0.0,
+      "a": 26.5,
+      "b": 34.0,
+      "score": 0.918713920386427
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -1.0,
+      "delta_b": 0.0,
+      "a": 25.0,
+      "b": 34.0,
+      "score": 0.9129342275597286
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 1.0,
+      "delta_b": 0.0,
+      "a": 27.0,
+      "b": 34.0,
+      "score": 0.9205614508160216
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -1.5,
+      "delta_b": 0.0,
+      "a": 24.5,
+      "b": 34.0,
+      "score": 0.9109264722644368
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 1.5,
+      "delta_b": 0.0,
+      "a": 27.5,
+      "b": 34.0,
+      "score": 0.9223705374435115
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -2.0,
+      "delta_b": 0.0,
+      "a": 24.0,
+      "b": 34.0,
+      "score": 0.9088770389851438
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 2.0,
+      "delta_b": 0.0,
+      "a": 28.0,
+      "b": 34.0,
+      "score": 0.9241418199787566
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": -0.5,
+      "a": 26.0,
+      "b": 33.5,
+      "score": 0.9139226791669082
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": 0.5,
+      "a": 26.0,
+      "b": 34.5,
+      "score": 0.9196425311777929
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": -1.0,
+      "a": 26.0,
+      "b": 33.0,
+      "score": 0.9109264722644368
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": 1.0,
+      "a": 26.0,
+      "b": 35.0,
+      "score": 0.9223705374435115
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": -1.5,
+      "a": 26.0,
+      "b": 32.5,
+      "score": 0.9078364897378534
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": 1.5,
+      "a": 26.0,
+      "b": 35.5,
+      "score": 0.9250134837227268
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": -2.0,
+      "a": 26.0,
+      "b": 32.0,
+      "score": 0.9046505351008906
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 0.0,
+      "delta_b": 2.0,
+      "a": 26.0,
+      "b": 36.0,
+      "score": 0.9275735146384823
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -1.0,
+      "delta_b": -1.0,
+      "a": 25.0,
+      "b": 33.0,
+      "score": 0.9067852769181763
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -1.0,
+      "delta_b": 1.0,
+      "a": 25.0,
+      "b": 35.0,
+      "score": 0.918713920386427
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 1.0,
+      "delta_b": -1.0,
+      "a": 27.0,
+      "b": 33.0,
+      "score": 0.9149009549929797
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 1.0,
+      "delta_b": 1.0,
+      "a": 27.0,
+      "b": 35.0,
+      "score": 0.9258759348093368
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -2.0,
+      "delta_b": -2.0,
+      "a": 24.0,
+      "b": 32.0,
+      "score": 0.8956687768809987
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": -2.0,
+      "delta_b": 2.0,
+      "a": 24.0,
+      "b": 36.0,
+      "score": 0.9205614508160216
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 2.0,
+      "delta_b": -2.0,
+      "a": 28.0,
+      "b": 32.0,
+      "score": 0.9129342275597286
+    },
+    {
+      "sample": "Makeover",
+      "base_a": 26.0,
+      "base_b": 34.0,
+      "delta_a": 2.0,
+      "delta_b": 2.0,
+      "a": 28.0,
+      "b": 36.0,
+      "score": 0.9340109905087812
+    }
+  ]
+}

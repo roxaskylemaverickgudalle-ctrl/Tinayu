@@ -1,0 +1,795 @@
+{
+  "tool": "Tinayu Profile Stability + Diagnostic Evaluation",
+  "ground_truth_test": false,
+  "engine_modified": false,
+  "validation_directory": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples",
+  "image_count": 7,
+  "successful": 7,
+  "failed": 0,
+  "records": [
+    {
+      "success": true,
+      "file": "Bright indoor lighting.webp",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\Bright indoor lighting.webp",
+      "image": {
+        "width": 800,
+        "height": 533
+      },
+      "face": {
+        "confidence": 0.9774,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 93.42,
+        "skin_pixels": 242,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          220,
+          173,
+          165
+        ],
+        "lab": {
+          "L": 74.9,
+          "a": 16.0,
+          "b": 11.0
+        },
+        "hue": 8.0,
+        "chroma": 19.42
+      },
+      "normalized_skin": {
+        "rgb": [
+          200,
+          154,
+          145
+        ],
+        "lab": {
+          "L": 67.84,
+          "a": 16.0,
+          "b": 11.0
+        },
+        "hue": 10.0,
+        "chroma": 19.42
+      },
+      "normalization_delta": {
+        "rgb": [
+          -20,
+          -19,
+          -20
+        ],
+        "lab": {
+          "L": -7.06,
+          "a": 0.0,
+          "b": 0.0
+        },
+        "hue": 2.0,
+        "chroma": 0.0,
+        "temperature_strength": 0.0
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.544,
+          "temperature_strength_band": "Neutral",
+          "distance_to_neutral_warm_boundary": -0.006,
+          "distance_to_strong_warm_boundary": -0.036,
+          "distance_to_cool_neutral_boundary": 0.124
+        },
+        "normalized": {
+          "temperature_strength": 0.544,
+          "temperature_strength_band": "Neutral",
+          "distance_to_neutral_warm_boundary": -0.006,
+          "distance_to_strong_warm_boundary": -0.036,
+          "distance_to_cool_neutral_boundary": 0.124
+        }
+      },
+      "profile": {
+        "season": "Neutral",
+        "temperature": "Neutral",
+        "temperature_strength": 0.544,
+        "temperature_strength_band": "Neutral",
+        "skin_category": "Medium-Light",
+        "skin_depth": "Medium-Light",
+        "skin_saturation": "Moderate",
+        "contrast": "Moderate"
+      },
+      "recommendations": {
+        "clothing": [
+          "Sage",
+          "Muted Plum",
+          "Moss Green",
+          "Forest Green",
+          "Deep Olive"
+        ],
+        "makeup": [
+          "Warm Nude",
+          "Dusty Rose",
+          "Warm Plum",
+          "Brown",
+          "Warm Brown"
+        ],
+        "accents": [
+          "Warm Beige",
+          "Muted Gold",
+          "Antique Gold",
+          "Copper",
+          "Honey"
+        ]
+      }
+    },
+    {
+      "success": true,
+      "file": "Different camera.webp",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\Different camera.webp",
+      "image": {
+        "width": 480,
+        "height": 270
+      },
+      "face": {
+        "confidence": 0.928,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 87.46,
+        "skin_pixels": 705,
+        "normalization_applied": true,
+        "hair_detected": false,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          206,
+          163,
+          148
+        ],
+        "lab": {
+          "L": 70.59,
+          "a": 14.0,
+          "b": 14.0
+        },
+        "hue": 16.0,
+        "chroma": 19.8
+      },
+      "normalized_skin": {
+        "rgb": [
+          191,
+          149,
+          134
+        ],
+        "lab": {
+          "L": 65.1,
+          "a": 13.0,
+          "b": 14.0
+        },
+        "hue": 16.0,
+        "chroma": 19.1
+      },
+      "normalization_delta": {
+        "rgb": [
+          -15,
+          -14,
+          -14
+        ],
+        "lab": {
+          "L": -5.49,
+          "a": -1.0,
+          "b": 0.0
+        },
+        "hue": 0.0,
+        "chroma": -0.7,
+        "temperature_strength": -0.012
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.574,
+          "temperature_strength_band": "Borderline Warm",
+          "distance_to_neutral_warm_boundary": 0.024,
+          "distance_to_strong_warm_boundary": -0.006,
+          "distance_to_cool_neutral_boundary": 0.154
+        },
+        "normalized": {
+          "temperature_strength": 0.562,
+          "temperature_strength_band": "Borderline Warm",
+          "distance_to_neutral_warm_boundary": 0.012,
+          "distance_to_strong_warm_boundary": -0.018,
+          "distance_to_cool_neutral_boundary": 0.142
+        }
+      },
+      "profile": {
+        "season": "Neutral",
+        "temperature": "Warm",
+        "temperature_strength": 0.562,
+        "temperature_strength_band": "Borderline Warm",
+        "skin_category": "Medium-Light",
+        "skin_depth": "Medium-Light",
+        "skin_saturation": "Moderate",
+        "contrast": "Moderate"
+      },
+      "recommendations": {
+        "clothing": [
+          "Sage",
+          "Muted Plum",
+          "Moss Green",
+          "Forest Green",
+          "Deep Olive"
+        ],
+        "makeup": [
+          "Warm Nude",
+          "Dusty Rose",
+          "Warm Plum",
+          "Brown",
+          "Warm Brown"
+        ],
+        "accents": [
+          "Warm Beige",
+          "Muted Gold",
+          "Antique Gold",
+          "Copper",
+          "Honey"
+        ]
+      }
+    },
+    {
+      "success": true,
+      "file": "Outdoor lighting.webp",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\Outdoor lighting.webp",
+      "image": {
+        "width": 1185,
+        "height": 670
+      },
+      "face": {
+        "confidence": 0.9653,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 97.57,
+        "skin_pixels": 440,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          181,
+          139,
+          117
+        ],
+        "lab": {
+          "L": 61.18,
+          "a": 13.0,
+          "b": 18.0
+        },
+        "hue": 20.0,
+        "chroma": 22.2
+      },
+      "normalized_skin": {
+        "rgb": [
+          179,
+          137,
+          115
+        ],
+        "lab": {
+          "L": 60.78,
+          "a": 13.0,
+          "b": 18.0
+        },
+        "hue": 20.0,
+        "chroma": 22.2
+      },
+      "normalization_delta": {
+        "rgb": [
+          -2,
+          -2,
+          -2
+        ],
+        "lab": {
+          "L": -0.4,
+          "a": 0.0,
+          "b": 0.0
+        },
+        "hue": 0.0,
+        "chroma": 0.0,
+        "temperature_strength": 0.0
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.634,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.084,
+          "distance_to_strong_warm_boundary": 0.054,
+          "distance_to_cool_neutral_boundary": 0.214
+        },
+        "normalized": {
+          "temperature_strength": 0.634,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.084,
+          "distance_to_strong_warm_boundary": 0.054,
+          "distance_to_cool_neutral_boundary": 0.214
+        }
+      },
+      "profile": {
+        "season": "Warm Spring",
+        "temperature": "Warm",
+        "temperature_strength": 0.634,
+        "temperature_strength_band": "Strong Warm",
+        "skin_category": "Medium-Light",
+        "skin_depth": "Medium-Light",
+        "skin_saturation": "Moderate",
+        "contrast": "High"
+      },
+      "recommendations": {
+        "clothing": [
+          "Warm Beige",
+          "Camel",
+          "Dusty Rose",
+          "Dusty Olive",
+          "Warm Rose"
+        ],
+        "makeup": [
+          "Dusty Rose",
+          "Warm Nude",
+          "Warm Rose",
+          "Brown",
+          "Warm Brown"
+        ],
+        "accents": [
+          "Warm Beige",
+          "Muted Gold",
+          "Antique Gold",
+          "Copper",
+          "Olive"
+        ]
+      }
+    },
+    {
+      "success": true,
+      "file": "Slightly different angle.webp",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\Slightly different angle.webp",
+      "image": {
+        "width": 599,
+        "height": 900
+      },
+      "face": {
+        "confidence": 0.9283,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 94.98,
+        "skin_pixels": 394,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          223,
+          173,
+          147
+        ],
+        "lab": {
+          "L": 74.51,
+          "a": 15.0,
+          "b": 20.0
+        },
+        "hue": 20.0,
+        "chroma": 25.0
+      },
+      "normalized_skin": {
+        "rgb": [
+          202,
+          153,
+          128
+        ],
+        "lab": {
+          "L": 67.45,
+          "a": 15.0,
+          "b": 20.0
+        },
+        "hue": 20.0,
+        "chroma": 25.0
+      },
+      "normalization_delta": {
+        "rgb": [
+          -21,
+          -20,
+          -19
+        ],
+        "lab": {
+          "L": -7.06,
+          "a": 0.0,
+          "b": 0.0
+        },
+        "hue": 0.0,
+        "chroma": 0.0,
+        "temperature_strength": 0.0
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.69,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.14,
+          "distance_to_strong_warm_boundary": 0.11,
+          "distance_to_cool_neutral_boundary": 0.27
+        },
+        "normalized": {
+          "temperature_strength": 0.69,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.14,
+          "distance_to_strong_warm_boundary": 0.11,
+          "distance_to_cool_neutral_boundary": 0.27
+        }
+      },
+      "profile": {
+        "season": "Warm Spring",
+        "temperature": "Warm",
+        "temperature_strength": 0.69,
+        "temperature_strength_band": "Strong Warm",
+        "skin_category": "Medium-Light",
+        "skin_depth": "Medium-Light",
+        "skin_saturation": "Moderate",
+        "contrast": "Moderate"
+      },
+      "recommendations": {
+        "clothing": [
+          "Warm Beige",
+          "Camel",
+          "Sand",
+          "Dusty Rose",
+          "Warm Rose"
+        ],
+        "makeup": [
+          "Warm Nude",
+          "Dusty Rose",
+          "Warm Rose",
+          "Brown",
+          "Warm Brown"
+        ],
+        "accents": [
+          "Warm Beige",
+          "Muted Gold",
+          "Antique Gold",
+          "Honey",
+          "Copper"
+        ]
+      }
+    },
+    {
+      "success": true,
+      "file": "Without makeup.jpg",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\Without makeup.jpg",
+      "image": {
+        "width": 540,
+        "height": 360
+      },
+      "face": {
+        "confidence": 0.9691,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 92.84,
+        "skin_pixels": 270,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          231,
+          196,
+          173
+        ],
+        "lab": {
+          "L": 81.57,
+          "a": 9.0,
+          "b": 16.0
+        },
+        "hue": 24.0,
+        "chroma": 18.36
+      },
+      "normalized_skin": {
+        "rgb": [
+          200,
+          166,
+          144
+        ],
+        "lab": {
+          "L": 70.59,
+          "a": 9.0,
+          "b": 16.0
+        },
+        "hue": 24.0,
+        "chroma": 18.36
+      },
+      "normalization_delta": {
+        "rgb": [
+          -31,
+          -30,
+          -29
+        ],
+        "lab": {
+          "L": -10.98,
+          "a": 0.0,
+          "b": 0.0
+        },
+        "hue": 0.0,
+        "chroma": 0.0,
+        "temperature_strength": 0.0
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.55,
+          "temperature_strength_band": "Neutral",
+          "distance_to_neutral_warm_boundary": -0.0,
+          "distance_to_strong_warm_boundary": -0.03,
+          "distance_to_cool_neutral_boundary": 0.13
+        },
+        "normalized": {
+          "temperature_strength": 0.55,
+          "temperature_strength_band": "Neutral",
+          "distance_to_neutral_warm_boundary": -0.0,
+          "distance_to_strong_warm_boundary": -0.03,
+          "distance_to_cool_neutral_boundary": 0.13
+        }
+      },
+      "profile": {
+        "season": "Neutral",
+        "temperature": "Neutral",
+        "temperature_strength": 0.55,
+        "temperature_strength_band": "Neutral",
+        "skin_category": "Light",
+        "skin_depth": "Light",
+        "skin_saturation": "Moderate",
+        "contrast": "High"
+      },
+      "recommendations": {
+        "clothing": [
+          "Sage",
+          "Muted Plum",
+          "Moss Green",
+          "Forest Green",
+          "Deep Olive"
+        ],
+        "makeup": [
+          "Warm Nude",
+          "Dusty Rose",
+          "Warm Plum",
+          "Brown",
+          "Warm Brown"
+        ],
+        "accents": [
+          "Warm Beige",
+          "Muted Gold",
+          "Antique Gold",
+          "Copper",
+          "Honey"
+        ]
+      }
+    },
+    {
+      "success": true,
+      "file": "normal_indoor_lightingg.jpg",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\normal_indoor_lightingg.jpg",
+      "image": {
+        "width": 480,
+        "height": 640
+      },
+      "face": {
+        "confidence": 0.9667,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 97.67,
+        "skin_pixels": 616,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          163,
+          129,
+          105
+        ],
+        "lab": {
+          "L": 56.47,
+          "a": 10.0,
+          "b": 18.0
+        },
+        "hue": 24.0,
+        "chroma": 20.59
+      },
+      "normalized_skin": {
+        "rgb": [
+          167,
+          133,
+          109
+        ],
+        "lab": {
+          "L": 58.04,
+          "a": 10.0,
+          "b": 18.0
+        },
+        "hue": 24.0,
+        "chroma": 20.59
+      },
+      "normalization_delta": {
+        "rgb": [
+          4,
+          4,
+          4
+        ],
+        "lab": {
+          "L": 1.57,
+          "a": 0.0,
+          "b": 0.0
+        },
+        "hue": 0.0,
+        "chroma": 0.0,
+        "temperature_strength": 0.0
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.599,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.049,
+          "distance_to_strong_warm_boundary": 0.019,
+          "distance_to_cool_neutral_boundary": 0.179
+        },
+        "normalized": {
+          "temperature_strength": 0.599,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.049,
+          "distance_to_strong_warm_boundary": 0.019,
+          "distance_to_cool_neutral_boundary": 0.179
+        }
+      },
+      "profile": {
+        "season": "Warm Spring",
+        "temperature": "Warm",
+        "temperature_strength": 0.599,
+        "temperature_strength_band": "Strong Warm",
+        "skin_category": "Medium-Light",
+        "skin_depth": "Medium-Light",
+        "skin_saturation": "Moderate",
+        "contrast": "High"
+      },
+      "recommendations": {
+        "clothing": [
+          "Warm Beige",
+          "Camel",
+          "Dusty Rose",
+          "Dusty Olive",
+          "Warm Rose"
+        ],
+        "makeup": [
+          "Dusty Rose",
+          "Warm Nude",
+          "Warm Rose",
+          "Brown",
+          "Warm Brown"
+        ],
+        "accents": [
+          "Warm Beige",
+          "Muted Gold",
+          "Antique Gold",
+          "Copper",
+          "Olive"
+        ]
+      }
+    },
+    {
+      "success": true,
+      "file": "with makeover.jpg",
+      "path": "C:\\Users\\User\\Desktop\\Projects\\tinayu\\tinayu-api\\validation_samples\\with makeover.jpg",
+      "image": {
+        "width": 705,
+        "height": 529
+      },
+      "face": {
+        "confidence": 0.9342,
+        "landmarks": 478
+      },
+      "quality": {
+        "image_confidence": 95.39,
+        "skin_pixels": 965,
+        "normalization_applied": true,
+        "hair_detected": true,
+        "eyes_detected": true
+      },
+      "raw_skin": {
+        "rgb": [
+          230,
+          150,
+          108
+        ],
+        "lab": {
+          "L": 69.41,
+          "a": 26.0,
+          "b": 34.0
+        },
+        "hue": 20.0,
+        "chroma": 42.8
+      },
+      "normalized_skin": {
+        "rgb": [
+          217,
+          138,
+          97
+        ],
+        "lab": {
+          "L": 64.71,
+          "a": 26.0,
+          "b": 34.0
+        },
+        "hue": 20.0,
+        "chroma": 42.8
+      },
+      "normalization_delta": {
+        "rgb": [
+          -13,
+          -12,
+          -11
+        ],
+        "lab": {
+          "L": -4.7,
+          "a": 0.0,
+          "b": 0.0
+        },
+        "hue": 0.0,
+        "chroma": 0.0,
+        "temperature_strength": 0.0
+      },
+      "temperature_diagnostics": {
+        "raw": {
+          "temperature_strength": 0.917,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.367,
+          "distance_to_strong_warm_boundary": 0.337,
+          "distance_to_cool_neutral_boundary": 0.497
+        },
+        "normalized": {
+          "temperature_strength": 0.917,
+          "temperature_strength_band": "Strong Warm",
+          "distance_to_neutral_warm_boundary": 0.367,
+          "distance_to_strong_warm_boundary": 0.337,
+          "distance_to_cool_neutral_boundary": 0.497
+        }
+      },
+      "profile": {
+        "season": "Warm Spring",
+        "temperature": "Warm",
+        "temperature_strength": 0.917,
+        "temperature_strength_band": "Strong Warm",
+        "skin_category": "Medium-Light",
+        "skin_depth": "Medium-Light",
+        "skin_saturation": "Clear",
+        "contrast": "High"
+      },
+      "recommendations": {
+        "clothing": [
+          "Camel",
+          "Warm Beige",
+          "Warm Coral",
+          "Soft Rust",
+          "Mustard"
+        ],
+        "makeup": [
+          "Soft Rust",
+          "Peach",
+          "Warm Rose",
+          "Warm Brown",
+          "Brown"
+        ],
+        "accents": [
+          "Antique Gold",
+          "Muted Gold",
+          "Honey",
+          "Copper",
+          "Olive"
+        ]
+      }
+    }
+  ]
+}

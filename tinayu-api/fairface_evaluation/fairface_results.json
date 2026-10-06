@@ -1,0 +1,2971 @@
+[
+  {
+    "index": 1,
+    "image_file": "fairface_evaluation\\images\\fairface_001.jpg",
+    "processing_time_seconds": 0.3684,
+    "success": true,
+    "face": {
+      "confidence": 0.9206,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.44,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 393
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 2,
+    "image_file": "fairface_evaluation\\images\\fairface_002.jpg",
+    "processing_time_seconds": 0.0825,
+    "success": true,
+    "face": {
+      "confidence": 0.7971,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 85.79,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 373
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 3,
+    "image_file": "fairface_evaluation\\images\\fairface_003.jpg",
+    "processing_time_seconds": 0.0724,
+    "success": true,
+    "face": {
+      "confidence": 0.9398,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 95.79,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 382
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 4,
+    "image_file": "fairface_evaluation\\images\\fairface_004.jpg",
+    "processing_time_seconds": 0.0561,
+    "success": true,
+    "face": {
+      "confidence": 0.8555,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 89.88,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 388
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 5,
+    "image_file": "fairface_evaluation\\images\\fairface_005.jpg",
+    "processing_time_seconds": 0.1043,
+    "success": true,
+    "face": {
+      "confidence": 0.5538,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 68.77,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 444
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 6,
+    "image_file": "fairface_evaluation\\images\\fairface_006.jpg",
+    "processing_time_seconds": 0.0993,
+    "success": true,
+    "face": {
+      "confidence": 0.7665,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 83.65,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 361
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 7,
+    "image_file": "fairface_evaluation\\images\\fairface_007.jpg",
+    "processing_time_seconds": 0.1124,
+    "success": true,
+    "face": {
+      "confidence": 0.8852,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 91.96,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 389
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 8,
+    "image_file": "fairface_evaluation\\images\\fairface_008.jpg",
+    "processing_time_seconds": 0.113,
+    "success": true,
+    "face": {
+      "confidence": 0.5217,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 66.52,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 381
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 9,
+    "image_file": "fairface_evaluation\\images\\fairface_009.jpg",
+    "processing_time_seconds": 0.028,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 10,
+    "image_file": "fairface_evaluation\\images\\fairface_010.jpg",
+    "processing_time_seconds": 0.1335,
+    "success": true,
+    "face": {
+      "confidence": 0.8759,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 91.31,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 392
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 11,
+    "image_file": "fairface_evaluation\\images\\fairface_011.jpg",
+    "processing_time_seconds": 0.1204,
+    "success": true,
+    "face": {
+      "confidence": 0.5554,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 68.88,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 358
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 12,
+    "image_file": "fairface_evaluation\\images\\fairface_012.jpg",
+    "processing_time_seconds": 0.1173,
+    "success": true,
+    "face": {
+      "confidence": 0.8739,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 91.17,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 392
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 13,
+    "image_file": "fairface_evaluation\\images\\fairface_013.jpg",
+    "processing_time_seconds": 0.0569,
+    "success": true,
+    "face": {
+      "confidence": 0.9104,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 93.73,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 396
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 14,
+    "image_file": "fairface_evaluation\\images\\fairface_014.jpg",
+    "processing_time_seconds": 0.0179,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 15,
+    "image_file": "fairface_evaluation\\images\\fairface_015.jpg",
+    "processing_time_seconds": 0.0656,
+    "success": true,
+    "face": {
+      "confidence": 0.848,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 89.36,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 413
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 16,
+    "image_file": "fairface_evaluation\\images\\fairface_016.jpg",
+    "processing_time_seconds": 0.0563,
+    "success": true,
+    "face": {
+      "confidence": 0.8117,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 86.82,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 393
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 17,
+    "image_file": "fairface_evaluation\\images\\fairface_017.jpg",
+    "processing_time_seconds": 0.1099,
+    "success": true,
+    "face": {
+      "confidence": 0.6445,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 75.11,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 402
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 18,
+    "image_file": "fairface_evaluation\\images\\fairface_018.jpg",
+    "processing_time_seconds": 0.1384,
+    "success": true,
+    "face": {
+      "confidence": 0.9168,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 89.18,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 202
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 19,
+    "image_file": "fairface_evaluation\\images\\fairface_019.jpg",
+    "processing_time_seconds": 0.1609,
+    "success": true,
+    "face": {
+      "confidence": 0.7691,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 83.84,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 338
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Autumn",
+      "skin_depth": "Medium",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 20,
+    "image_file": "fairface_evaluation\\images\\fairface_020.jpg",
+    "processing_time_seconds": 0.1462,
+    "success": true,
+    "face": {
+      "confidence": 0.7288,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 81.02,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 355
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 21,
+    "image_file": "fairface_evaluation\\images\\fairface_021.jpg",
+    "processing_time_seconds": 0.0265,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 22,
+    "image_file": "fairface_evaluation\\images\\fairface_022.jpg",
+    "processing_time_seconds": 0.1398,
+    "success": true,
+    "face": {
+      "confidence": 0.8704,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 90.93,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 386
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 23,
+    "image_file": "fairface_evaluation\\images\\fairface_023.jpg",
+    "processing_time_seconds": 0.2404,
+    "success": true,
+    "face": {
+      "confidence": 0.9167,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.17,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 339
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 24,
+    "image_file": "fairface_evaluation\\images\\fairface_024.jpg",
+    "processing_time_seconds": 0.163,
+    "success": true,
+    "face": {
+      "confidence": 0.7161,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 80.13,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 378
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 25,
+    "image_file": "fairface_evaluation\\images\\fairface_025.jpg",
+    "processing_time_seconds": 0.1262,
+    "success": true,
+    "face": {
+      "confidence": 0.7119,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 79.83,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 423
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 26,
+    "image_file": "fairface_evaluation\\images\\fairface_026.jpg",
+    "processing_time_seconds": 0.1432,
+    "success": true,
+    "face": {
+      "confidence": 0.895,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 92.65,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 350
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 27,
+    "image_file": "fairface_evaluation\\images\\fairface_027.jpg",
+    "processing_time_seconds": 0.0877,
+    "success": true,
+    "face": {
+      "confidence": 0.9247,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.73,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 355
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 28,
+    "image_file": "fairface_evaluation\\images\\fairface_028.jpg",
+    "processing_time_seconds": 0.0598,
+    "success": true,
+    "face": {
+      "confidence": 0.8994,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 92.96,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 393
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 29,
+    "image_file": "fairface_evaluation\\images\\fairface_029.jpg",
+    "processing_time_seconds": 0.0609,
+    "success": true,
+    "face": {
+      "confidence": 0.716,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 80.12,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 339
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 30,
+    "image_file": "fairface_evaluation\\images\\fairface_030.jpg",
+    "processing_time_seconds": 0.057,
+    "success": true,
+    "face": {
+      "confidence": 0.9361,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 95.53,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 321
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 31,
+    "image_file": "fairface_evaluation\\images\\fairface_031.jpg",
+    "processing_time_seconds": 0.1093,
+    "success": true,
+    "face": {
+      "confidence": 0.9337,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 95.36,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 354
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 32,
+    "image_file": "fairface_evaluation\\images\\fairface_032.jpg",
+    "processing_time_seconds": 0.1298,
+    "success": true,
+    "face": {
+      "confidence": 0.8614,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 90.3,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 385
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 33,
+    "image_file": "fairface_evaluation\\images\\fairface_033.jpg",
+    "processing_time_seconds": 0.1472,
+    "success": true,
+    "face": {
+      "confidence": 0.6835,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 77.84,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 363
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 34,
+    "image_file": "fairface_evaluation\\images\\fairface_034.jpg",
+    "processing_time_seconds": 0.1474,
+    "success": true,
+    "face": {
+      "confidence": 0.7764,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 84.35,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 344
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium",
+      "skin_saturation": "Clear",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 35,
+    "image_file": "fairface_evaluation\\images\\fairface_035.jpg",
+    "processing_time_seconds": 0.1396,
+    "success": true,
+    "face": {
+      "confidence": 0.6532,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 75.73,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 374
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 36,
+    "image_file": "fairface_evaluation\\images\\fairface_036.jpg",
+    "processing_time_seconds": 0.1134,
+    "success": true,
+    "face": {
+      "confidence": 0.7832,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 84.82,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 370
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 37,
+    "image_file": "fairface_evaluation\\images\\fairface_037.jpg",
+    "processing_time_seconds": 0.2499,
+    "success": true,
+    "face": {
+      "confidence": 0.8373,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 88.61,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 346
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 38,
+    "image_file": "fairface_evaluation\\images\\fairface_038.jpg",
+    "processing_time_seconds": 0.1516,
+    "success": true,
+    "face": {
+      "confidence": 0.6622,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 76.36,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 376
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 39,
+    "image_file": "fairface_evaluation\\images\\fairface_039.jpg",
+    "processing_time_seconds": 0.1929,
+    "success": true,
+    "face": {
+      "confidence": 0.9498,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 96.49,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 351
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 40,
+    "image_file": "fairface_evaluation\\images\\fairface_040.jpg",
+    "processing_time_seconds": 0.1285,
+    "success": true,
+    "face": {
+      "confidence": 0.9208,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.46,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 369
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 41,
+    "image_file": "fairface_evaluation\\images\\fairface_041.jpg",
+    "processing_time_seconds": 0.1458,
+    "success": true,
+    "face": {
+      "confidence": 0.6927,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 78.49,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 398
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 42,
+    "image_file": "fairface_evaluation\\images\\fairface_042.jpg",
+    "processing_time_seconds": 0.1848,
+    "success": true,
+    "face": {
+      "confidence": 0.8368,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 88.57,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 413
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 43,
+    "image_file": "fairface_evaluation\\images\\fairface_043.jpg",
+    "processing_time_seconds": 0.1629,
+    "success": true,
+    "face": {
+      "confidence": 0.8817,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 91.72,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 338
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 44,
+    "image_file": "fairface_evaluation\\images\\fairface_044.jpg",
+    "processing_time_seconds": 0.1581,
+    "success": true,
+    "face": {
+      "confidence": 0.6854,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 77.98,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 360
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 45,
+    "image_file": "fairface_evaluation\\images\\fairface_045.jpg",
+    "processing_time_seconds": 0.1381,
+    "success": true,
+    "face": {
+      "confidence": 0.9258,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.81,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 391
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 46,
+    "image_file": "fairface_evaluation\\images\\fairface_046.jpg",
+    "processing_time_seconds": 0.1617,
+    "success": true,
+    "face": {
+      "confidence": 0.9028,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 93.19,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 381
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 47,
+    "image_file": "fairface_evaluation\\images\\fairface_047.jpg",
+    "processing_time_seconds": 0.1568,
+    "success": true,
+    "face": {
+      "confidence": 0.901,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 93.07,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 388
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 48,
+    "image_file": "fairface_evaluation\\images\\fairface_048.jpg",
+    "processing_time_seconds": 0.1504,
+    "success": true,
+    "face": {
+      "confidence": 0.8144,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 82.01,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 244
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 49,
+    "image_file": "fairface_evaluation\\images\\fairface_049.jpg",
+    "processing_time_seconds": 0.1361,
+    "success": true,
+    "face": {
+      "confidence": 0.5421,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 67.95,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 410
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Low"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 50,
+    "image_file": "fairface_evaluation\\images\\fairface_050.jpg",
+    "processing_time_seconds": 0.0843,
+    "success": true,
+    "face": {
+      "confidence": 0.7619,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 78.33,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 160
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Low"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 51,
+    "image_file": "fairface_evaluation\\images\\fairface_051.jpg",
+    "processing_time_seconds": 0.0841,
+    "success": true,
+    "face": {
+      "confidence": 0.9243,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.7,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 346
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 52,
+    "image_file": "fairface_evaluation\\images\\fairface_052.jpg",
+    "processing_time_seconds": 0.023,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 53,
+    "image_file": "fairface_evaluation\\images\\fairface_053.jpg",
+    "processing_time_seconds": 0.061,
+    "success": true,
+    "face": {
+      "confidence": 0.9174,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.22,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 341
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 54,
+    "image_file": "fairface_evaluation\\images\\fairface_054.jpg",
+    "processing_time_seconds": 0.0977,
+    "success": true,
+    "face": {
+      "confidence": 0.6814,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 77.7,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 378
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 55,
+    "image_file": "fairface_evaluation\\images\\fairface_055.jpg",
+    "processing_time_seconds": 0.0979,
+    "success": true,
+    "face": {
+      "confidence": 0.6731,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 77.12,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 369
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 56,
+    "image_file": "fairface_evaluation\\images\\fairface_056.jpg",
+    "processing_time_seconds": 0.0992,
+    "success": true,
+    "face": {
+      "confidence": 0.7795,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 84.56,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 370
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 57,
+    "image_file": "fairface_evaluation\\images\\fairface_057.jpg",
+    "processing_time_seconds": 0.1251,
+    "success": true,
+    "face": {
+      "confidence": 0.7678,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 83.74,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 348
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 58,
+    "image_file": "fairface_evaluation\\images\\fairface_058.jpg",
+    "processing_time_seconds": 0.1046,
+    "success": true,
+    "face": {
+      "confidence": 0.7744,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 84.21,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 322
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 59,
+    "image_file": "fairface_evaluation\\images\\fairface_059.jpg",
+    "processing_time_seconds": 0.1104,
+    "success": true,
+    "face": {
+      "confidence": 0.943,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 96.01,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 333
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 60,
+    "image_file": "fairface_evaluation\\images\\fairface_060.jpg",
+    "processing_time_seconds": 0.0727,
+    "success": true,
+    "face": {
+      "confidence": 0.8277,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 87.94,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 415
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 61,
+    "image_file": "fairface_evaluation\\images\\fairface_061.jpg",
+    "processing_time_seconds": 0.0773,
+    "success": true,
+    "face": {
+      "confidence": 0.8364,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 88.55,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 393
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 62,
+    "image_file": "fairface_evaluation\\images\\fairface_062.jpg",
+    "processing_time_seconds": 0.121,
+    "success": true,
+    "face": {
+      "confidence": 0.9093,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 93.65,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 367
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 63,
+    "image_file": "fairface_evaluation\\images\\fairface_063.jpg",
+    "processing_time_seconds": 0.1442,
+    "success": true,
+    "face": {
+      "confidence": 0.767,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 83.69,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 406
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 64,
+    "image_file": "fairface_evaluation\\images\\fairface_064.jpg",
+    "processing_time_seconds": 0.0357,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 65,
+    "image_file": "fairface_evaluation\\images\\fairface_065.jpg",
+    "processing_time_seconds": 0.0075,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No face detected in the image. Please use a clear front-facing photo."
+  },
+  {
+    "index": 66,
+    "image_file": "fairface_evaluation\\images\\fairface_066.jpg",
+    "processing_time_seconds": 0.0308,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 67,
+    "image_file": "fairface_evaluation\\images\\fairface_067.jpg",
+    "processing_time_seconds": 0.0296,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 68,
+    "image_file": "fairface_evaluation\\images\\fairface_068.jpg",
+    "processing_time_seconds": 0.1401,
+    "success": true,
+    "face": {
+      "confidence": 0.9024,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 93.17,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 353
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Autumn",
+      "skin_depth": "Medium",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 69,
+    "image_file": "fairface_evaluation\\images\\fairface_069.jpg",
+    "processing_time_seconds": 0.177,
+    "success": true,
+    "face": {
+      "confidence": 0.9258,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.81,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 349
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 70,
+    "image_file": "fairface_evaluation\\images\\fairface_070.jpg",
+    "processing_time_seconds": 0.0085,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No face detected in the image. Please use a clear front-facing photo."
+  },
+  {
+    "index": 71,
+    "image_file": "fairface_evaluation\\images\\fairface_071.jpg",
+    "processing_time_seconds": 0.1383,
+    "success": true,
+    "face": {
+      "confidence": 0.5115,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 55.81,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 111
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 72,
+    "image_file": "fairface_evaluation\\images\\fairface_072.jpg",
+    "processing_time_seconds": 0.1724,
+    "success": true,
+    "face": {
+      "confidence": 0.8955,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 87.69,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 284
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 73,
+    "image_file": "fairface_evaluation\\images\\fairface_073.jpg",
+    "processing_time_seconds": 0.1698,
+    "success": true,
+    "face": {
+      "confidence": 0.9441,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 96.09,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 348
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 74,
+    "image_file": "fairface_evaluation\\images\\fairface_074.jpg",
+    "processing_time_seconds": 0.1622,
+    "success": true,
+    "face": {
+      "confidence": 0.8127,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 86.89,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 347
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 75,
+    "image_file": "fairface_evaluation\\images\\fairface_075.jpg",
+    "processing_time_seconds": 0.1753,
+    "success": true,
+    "face": {
+      "confidence": 0.8611,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 90.28,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 384
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 76,
+    "image_file": "fairface_evaluation\\images\\fairface_076.jpg",
+    "processing_time_seconds": 0.1575,
+    "success": true,
+    "face": {
+      "confidence": 0.848,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 89.36,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 374
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 77,
+    "image_file": "fairface_evaluation\\images\\fairface_077.jpg",
+    "processing_time_seconds": 0.0321,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No facial landmarks detected."
+  },
+  {
+    "index": 78,
+    "image_file": "fairface_evaluation\\images\\fairface_078.jpg",
+    "processing_time_seconds": 0.1405,
+    "success": true,
+    "face": {
+      "confidence": 0.8662,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 90.63,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 362
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 79,
+    "image_file": "fairface_evaluation\\images\\fairface_079.jpg",
+    "processing_time_seconds": 0.1177,
+    "success": true,
+    "face": {
+      "confidence": 0.8452,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 89.16,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 379
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 80,
+    "image_file": "fairface_evaluation\\images\\fairface_080.jpg",
+    "processing_time_seconds": 0.116,
+    "success": true,
+    "face": {
+      "confidence": 0.8152,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 87.06,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 313
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 81,
+    "image_file": "fairface_evaluation\\images\\fairface_081.jpg",
+    "processing_time_seconds": 0.1153,
+    "success": true,
+    "face": {
+      "confidence": 0.793,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 85.51,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 353
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 82,
+    "image_file": "fairface_evaluation\\images\\fairface_082.jpg",
+    "processing_time_seconds": 0.1808,
+    "success": true,
+    "face": {
+      "confidence": 0.6885,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 78.19,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 402
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 83,
+    "image_file": "fairface_evaluation\\images\\fairface_083.jpg",
+    "processing_time_seconds": 0.169,
+    "success": true,
+    "face": {
+      "confidence": 0.9344,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 95.41,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 393
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 84,
+    "image_file": "fairface_evaluation\\images\\fairface_084.jpg",
+    "processing_time_seconds": 0.1244,
+    "success": true,
+    "face": {
+      "confidence": 0.764,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 83.48,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 311
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 85,
+    "image_file": "fairface_evaluation\\images\\fairface_085.jpg",
+    "processing_time_seconds": 0.1154,
+    "success": true,
+    "face": {
+      "confidence": 0.8043,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 86.3,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 367
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 86,
+    "image_file": "fairface_evaluation\\images\\fairface_086.jpg",
+    "processing_time_seconds": 0.0956,
+    "success": true,
+    "face": {
+      "confidence": 0.8149,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 87.05,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 374
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 87,
+    "image_file": "fairface_evaluation\\images\\fairface_087.jpg",
+    "processing_time_seconds": 0.1256,
+    "success": true,
+    "face": {
+      "confidence": 0.6632,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 76.43,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 411
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 88,
+    "image_file": "fairface_evaluation\\images\\fairface_088.jpg",
+    "processing_time_seconds": 0.068,
+    "success": true,
+    "face": {
+      "confidence": 0.8038,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 86.27,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 420
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Autumn",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 89,
+    "image_file": "fairface_evaluation\\images\\fairface_089.jpg",
+    "processing_time_seconds": 0.0699,
+    "success": true,
+    "face": {
+      "confidence": 0.7706,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 83.94,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 347
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 90,
+    "image_file": "fairface_evaluation\\images\\fairface_090.jpg",
+    "processing_time_seconds": 0.0677,
+    "success": true,
+    "face": {
+      "confidence": 0.6038,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 72.26,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 340
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 91,
+    "image_file": "fairface_evaluation\\images\\fairface_091.jpg",
+    "processing_time_seconds": 0.0868,
+    "success": true,
+    "face": {
+      "confidence": 0.9147,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.03,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 363
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 92,
+    "image_file": "fairface_evaluation\\images\\fairface_092.jpg",
+    "processing_time_seconds": 0.1112,
+    "success": true,
+    "face": {
+      "confidence": 0.8706,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 90.94,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 346
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 93,
+    "image_file": "fairface_evaluation\\images\\fairface_093.jpg",
+    "processing_time_seconds": 0.1335,
+    "success": true,
+    "face": {
+      "confidence": 0.7841,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 84.88,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 317
+    },
+    "profile": {
+      "skin_category": "Medium",
+      "temperature": "Neutral",
+      "suggested_season": "Neutral",
+      "skin_depth": "Medium",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 94,
+    "image_file": "fairface_evaluation\\images\\fairface_094.jpg",
+    "processing_time_seconds": 0.1012,
+    "success": true,
+    "face": {
+      "confidence": 0.8268,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 87.88,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 356
+    },
+    "profile": {
+      "skin_category": "Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 95,
+    "image_file": "fairface_evaluation\\images\\fairface_095.jpg",
+    "processing_time_seconds": 0.1084,
+    "success": true,
+    "face": {
+      "confidence": 0.8139,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 86.97,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 389
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 96,
+    "image_file": "fairface_evaluation\\images\\fairface_096.jpg",
+    "processing_time_seconds": 0.1051,
+    "success": true,
+    "face": {
+      "confidence": 0.8913,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 92.39,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 344
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Clear",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 97,
+    "image_file": "fairface_evaluation\\images\\fairface_097.jpg",
+    "processing_time_seconds": 0.1012,
+    "success": true,
+    "face": {
+      "confidence": 0.9178,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 94.25,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 332
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 98,
+    "image_file": "fairface_evaluation\\images\\fairface_098.jpg",
+    "processing_time_seconds": 0.0076,
+    "success": false,
+    "face": {},
+    "quality": {},
+    "profile": {},
+    "recommendations": {},
+    "error": "ValueError: No face detected in the image. Please use a clear front-facing photo."
+  },
+  {
+    "index": 99,
+    "image_file": "fairface_evaluation\\images\\fairface_099.jpg",
+    "processing_time_seconds": 0.108,
+    "success": true,
+    "face": {
+      "confidence": 0.8389,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 88.72,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 346
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Cool",
+      "suggested_season": "Cool Summer",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Muted",
+      "contrast_level": "Moderate"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  },
+  {
+    "index": 100,
+    "image_file": "fairface_evaluation\\images\\fairface_100.jpg",
+    "processing_time_seconds": 0.1117,
+    "success": true,
+    "face": {
+      "confidence": 0.9469,
+      "landmarks": 478,
+      "detected": true
+    },
+    "quality": {
+      "image_confidence": 96.29,
+      "hair_detected": true,
+      "eyes_detected": true,
+      "normalization_applied": true,
+      "skin_pixels_analyzed": 316
+    },
+    "profile": {
+      "skin_category": "Medium-Light",
+      "temperature": "Warm",
+      "suggested_season": "Warm Spring",
+      "skin_depth": "Medium-Light",
+      "skin_saturation": "Moderate",
+      "contrast_level": "High"
+    },
+    "recommendations": {
+      "clothing_count": 5,
+      "makeup_count": 5,
+      "accents_count": 5
+    },
+    "error": null
+  }
+]

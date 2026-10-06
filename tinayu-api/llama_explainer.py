@@ -9,6 +9,7 @@ from huggingface_hub import InferenceClient
 load_dotenv()
 
 LLAMA_ENABLED = os.getenv("LLAMA_ENABLED", "true").lower() == "true"
+
 LLAMA_MODEL = os.getenv(
     "LLAMA_MODEL",
     "meta-llama/Llama-3.1-8B-Instruct"
@@ -52,50 +53,73 @@ def build_explanation_prompt(profile, recommendations):
     )
 
     return f"""
-You are the explanation layer for Tinayu, a personal color analysis application.
+You are Tinayu's explanation writer.
 
-Your job is ONLY to explain the supplied analysis results.
+Tinayu has already determined the color analysis.
+Your job is ONLY to turn the supplied facts into three short sentences.
 
-Use ONLY the information provided below.
-Do not invent measurements, colors, traits, diagnoses, or recommendations.
+FACTS FROM TINAYU:
+{json.dumps(data, indent=2)}
 
-Keep the explanation concise, neutral, and easy to understand.
-
-Return ONLY valid JSON using exactly this structure:
+Return ONLY valid JSON:
 
 {{
-  "profile": "one concise sentence describing the supplied profile",
-  "why": "one concise sentence explaining the main color direction using the supplied temperature, saturation, contrast, or season",
-  "color_direction": "one concise sentence describing the recommended color direction using supplied recommendation names"
+  "profile": "...",
+  "why": "...",
+  "color_direction": "..."
 }}
 
-Rules:
-- Do not mention AI, models, prompts, or algorithms.
-- Do not claim scientific certainty.
-- Do not describe attractiveness or physical appearance.
-- Do not make claims about personality.
-- Do not add recommendations that are not supplied.
-- Do not use markdown.
-- Do not use bullet points.
-- Keep each field to one sentence.
-- Use normal spacing between words.
-- Keep the wording simple and professional.
+STRICT RULES:
 
-Supplied Tinayu analysis:
+1. Use ONLY facts explicitly present in the Tinayu data.
+2. Never invent facts.
+3. Never mention physical characteristics.
+4. Never mention color preferences.
+5. Never mention attractiveness or appearance.
+6. Never say a color is flattering, complementary, enhancing, or suitable for someone's skin.
+7. Never introduce "muted" when skin_saturation is "Clear".
+8. Never change "Clear" into "Muted".
+9. Never change "Warm" into "Cool" or "Neutral".
+10. Preserve the supplied season exactly.
+11. Preserve the supplied temperature exactly.
+12. Preserve the supplied skin depth exactly.
+13. Preserve the supplied skin saturation exactly.
+14. Preserve the supplied contrast level exactly.
+15. Use the supplied recommendation names only.
+16. Use normal spaces between every word.
+17. Do not combine words.
+18. Do not use markdown.
+19. Do not add explanations outside the JSON.
+20. Keep every field to one short sentence.
 
-{json.dumps(data, indent=2)}
+Use these meanings:
+
+- profile: state the supplied season, temperature, skin depth, skin saturation, and contrast.
+- why: explain the color direction using the supplied temperature, saturation, contrast, and season.
+- color_direction: describe the supplied recommended colors using only their names.
+
+Example structure:
+
+{{
+  "profile": "The profile is Warm Spring with a Warm temperature, Light skin depth, Clear skin saturation, and High contrast.",
+  "why": "The Warm temperature and Clear saturation indicate a warm and vibrant color direction.",
+  "color_direction": "The recommended direction includes warm colors such as Camel, Warm Beige, Dusty Rose, Peach, and Mustard."
+}}
 """.strip()
 
 
 def clean_text(text):
     text = str(text)
 
-    # Repair common spacing artifacts produced by the model.
     replacements = {
+        "individualwith": "individual with",
+        "profilewith": "profile with",
+        "seasonwith": "season with",
+
         "strongemphasis": "strong emphasis",
-        "strong emphasis": "strong emphasis",
+        "strongemphasis": "strong emphasis",
         "ofcontrast": "of contrast",
-        "of contrast": "of contrast",
+
         "Warmand": "Warm and",
         "warmand": "warm and",
         "Clearand": "Clear and",
@@ -104,6 +128,9 @@ def clean_text(text):
         "brightand": "bright and",
         "Richand": "Rich and",
         "richand": "rich and",
+        "Vibrantand": "Vibrant and",
+        "vibrantand": "vibrant and",
+
         "WarmSpring": "Warm Spring",
         "CoolSummer": "Cool Summer",
         "CoolWinter": "Cool Winter",
@@ -113,10 +140,7 @@ def clean_text(text):
     for old, new in replacements.items():
         text = text.replace(old, new)
 
-    # Repair repeated whitespace.
     text = re.sub(r"\s+", " ", text)
-
-    # Repair spaces before punctuation.
     text = re.sub(r"\s+([,.!?])", r"\1", text)
 
     return text.strip()
@@ -125,7 +149,6 @@ def clean_text(text):
 def parse_explanation(raw_text):
     raw_text = raw_text.strip()
 
-    # Remove accidental markdown code fences.
     raw_text = re.sub(
         r"^```(?:json)?\s*",
         "",
@@ -139,14 +162,17 @@ def parse_explanation(raw_text):
         raw_text
     )
 
-    # First attempt: valid JSON.
     try:
         parsed = json.loads(raw_text)
 
         if isinstance(parsed, dict):
             result = {
-                "profile": clean_text(parsed.get("profile", "")),
-                "why": clean_text(parsed.get("why", "")),
+                "profile": clean_text(
+                    parsed.get("profile", "")
+                ),
+                "why": clean_text(
+                    parsed.get("why", "")
+                ),
                 "color_direction": clean_text(
                     parsed.get("color_direction", "")
                 ),
@@ -158,7 +184,6 @@ def parse_explanation(raw_text):
     except json.JSONDecodeError:
         pass
 
-    # Fallback: recover common heading-based output.
     sections = {
         "profile": "",
         "why": "",
@@ -207,11 +232,6 @@ def parse_explanation(raw_text):
 
 
 def generate_explanation(profile, recommendations):
-    """
-    Generate a concise structured explanation using
-    Meta Llama through Hugging Face Inference Providers.
-    """
-
     if not LLAMA_ENABLED:
         return None
 
@@ -237,9 +257,9 @@ def generate_explanation(profile, recommendations):
             {
                 "role": "system",
                 "content": (
-                    "You are a concise explanation component "
-                    "for the Tinayu application. "
-                    "Follow the requested JSON format exactly."
+                    "You are the Tinayu explanation component. "
+                    "Follow the supplied data exactly. "
+                    "Return only the requested JSON."
                 ),
             },
             {
