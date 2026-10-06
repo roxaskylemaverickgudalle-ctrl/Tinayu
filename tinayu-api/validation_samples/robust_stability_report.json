@@ -1,0 +1,98 @@
+{
+  "successful": 7,
+  "total": 7,
+  "mean_current_strength": 0.6423,
+  "mean_robust_strength": 0.6408,
+  "median_current_strength": 0.599,
+  "median_robust_strength": 0.5866,
+  "mean_strength_delta": -0.0015,
+  "temperature_changes": 0,
+  "season_changes": 0,
+  "mean_retention": 0.8561,
+  "results": [
+    {
+      "file": "Bright indoor lighting.webp",
+      "current_strength": 0.544,
+      "robust_strength": 0.5312,
+      "current_temperature": "Neutral",
+      "robust_temperature": "Neutral",
+      "current_season": "Neutral",
+      "robust_season": "Neutral",
+      "retained_pixels": 200,
+      "total_pixels": 242,
+      "retention": 0.8264
+    },
+    {
+      "file": "Different camera.webp",
+      "current_strength": 0.562,
+      "robust_strength": 0.5622,
+      "current_temperature": "Warm",
+      "robust_temperature": "Warm",
+      "current_season": "Neutral",
+      "robust_season": "Neutral",
+      "retained_pixels": 657,
+      "total_pixels": 705,
+      "retention": 0.9319
+    },
+    {
+      "file": "normal_indoor_lightingg.jpg",
+      "current_strength": 0.599,
+      "robust_strength": 0.5866,
+      "current_temperature": "Warm",
+      "robust_temperature": "Warm",
+      "current_season": "Warm Spring",
+      "robust_season": "Warm Spring",
+      "retained_pixels": 583,
+      "total_pixels": 616,
+      "retention": 0.9464
+    },
+    {
+      "file": "Outdoor lighting.webp",
+      "current_strength": 0.634,
+      "robust_strength": 0.6341,
+      "current_temperature": "Warm",
+      "robust_temperature": "Warm",
+      "current_season": "Warm Spring",
+      "robust_season": "Warm Spring",
+      "retained_pixels": 434,
+      "total_pixels": 440,
+      "retention": 0.9864
+    },
+    {
+      "file": "Slightly different angle.webp",
+      "current_strength": 0.69,
+      "robust_strength": 0.7109,
+      "current_temperature": "Warm",
+      "robust_temperature": "Warm",
+      "current_season": "Warm Spring",
+      "robust_season": "Warm Spring",
+      "retained_pixels": 295,
+      "total_pixels": 394,
+      "retention": 0.7487
+    },
+    {
+      "file": "with makeover.jpg",
+      "current_strength": 0.917,
+      "robust_strength": 0.9109,
+      "current_temperature": "Warm",
+      "robust_temperature": "Warm",
+      "current_season": "Warm Spring",
+      "robust_season": "Warm Spring",
+      "retained_pixels": 605,
+      "total_pixels": 965,
+      "retention": 0.6269
+    },
+    {
+      "file": "Without makeup.jpg",
+      "current_strength": 0.55,
+      "robust_strength": 0.5498,
+      "current_temperature": "Neutral",
+      "robust_temperature": "Neutral",
+      "current_season": "Neutral",
+      "robust_season": "Neutral",
+      "retained_pixels": 250,
+      "total_pixels": 270,
+      "retention": 0.9259
+    }
+  ]
+}

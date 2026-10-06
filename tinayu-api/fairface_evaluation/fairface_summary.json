@@ -4,9 +4,9 @@
   "sample_size": 100,
   "seed": 42,
   "runtime": {
-    "total_seconds": 12.697,
-    "average_seconds_per_image": 0.114,
-    "estimated_images_per_minute": 526.84
+    "total_seconds": 5.733,
+    "average_seconds_per_image": 0.055,
+    "estimated_images_per_minute": 1083.77
   },
   "pipeline": {
     "successful": 89,
@@ -14,8 +14,8 @@
     "success_rate_percent": 89.0,
     "face_detected": 89,
     "face_detection_rate_percent": 89.0,
-    "hair_detected": 89,
-    "hair_detection_rate_percent": 89.0,
+    "hair_detected": 15,
+    "hair_detection_rate_percent": 15.0,
     "eyes_detected": 89,
     "eye_detection_rate_percent": 89.0,
     "normalization_applied": 89,
