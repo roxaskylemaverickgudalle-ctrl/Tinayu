@@ -43,3 +43,7 @@ Thumbs.db
 *.tflite
 *.task
 tinayu-api/test.jpg
+
+# Required Tinayu deployment models
+!tinayu-api/blaze_face_short_range.tflite
+!tinayu-api/face_landmarker.task
