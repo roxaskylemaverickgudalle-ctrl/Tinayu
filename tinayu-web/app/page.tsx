@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ChangeEvent,
   ClipboardEvent,
@@ -8,6 +9,8 @@ import {
   useRef,
   useState,
 } from "react";
+
+const TINAYU_API_URL = process.env.NEXT_PUBLIC_TINAYU_API_URL || "http://127.0.0.1:8000";
 
 type ColorRecommendation = {
   name: string;
@@ -564,7 +567,7 @@ export default function Home() {
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  function stopCamera() {
+  function releaseCamera() {
     if (streamRef.current) {
       streamRef.current.getTracks().forEach(function (track) {
         track.stop();
@@ -576,7 +579,10 @@ export default function Home() {
     if (videoRef.current) {
       videoRef.current.srcObject = null;
     }
+  }
 
+  function stopCamera() {
+    releaseCamera();
     setCameraActive(false);
   }
 
@@ -899,7 +905,7 @@ export default function Home() {
         );
 
         try {
-          const response = await fetch("http://127.0.0.1:8000/analyze", {
+          const response = await fetch(`${TINAYU_API_URL}/analyze`, {
             method: "POST",
             body: formData,
           });
@@ -1004,7 +1010,7 @@ export default function Home() {
 
       const response =
         await fetch(
-          "http://127.0.0.1:8000/analyze",
+          `${TINAYU_API_URL}/analyze`,
           {
             method: "POST",
             body: formData,
@@ -1101,6 +1107,12 @@ export default function Home() {
     });
   }
 
+  const handleFileRef = useRef(handleFile);
+
+  useEffect(function () {
+    handleFileRef.current = handleFile;
+  });
+
   useEffect(function () {
     function handleGlobalPaste(
       event: ClipboardEvent
@@ -1128,7 +1140,7 @@ export default function Home() {
             item.getAsFile();
 
           if (file) {
-            handleFile(file);
+            handleFileRef.current(file);
           }
 
           break;
@@ -1151,7 +1163,7 @@ export default function Home() {
 
   useEffect(function () {
     return function () {
-      stopCamera();
+      releaseCamera();
 
       if (image) {
         URL.revokeObjectURL(image);
@@ -1165,7 +1177,7 @@ export default function Home() {
         return;
       }
 
-      stopCamera();
+      releaseCamera();
     },
     [cameraMode]
   );
@@ -1320,10 +1332,14 @@ export default function Home() {
                     ) : (
                       <div className="overflow-hidden rounded-[1.5rem] border border-stone-200 bg-stone-50">
                         <div className="relative">
-                          <img
+                          <Image
                             src={image}
                             alt="Selected photo"
+                            width={1200}
+                            height={900}
+                            unoptimized
                             className="max-h-[560px] w-full object-contain"
+                            style={{ height: "auto" }}
                           />
 
                           <button
@@ -1624,12 +1640,15 @@ export default function Home() {
           <div className="mt-10 grid gap-5 lg:grid-cols-[1.4fr_0.8fr]">
             <div className="overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm">
               <div className="grid md:grid-cols-[0.8fr_1.2fr]">
-                <div className="min-h-[360px] bg-stone-100">
+                <div className="relative min-h-[360px] bg-stone-100">
                   {image && (
-                    <img
+                    <Image
                       src={image}
                       alt="Analyzed photo"
-                      className="h-full w-full object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      unoptimized
+                      className="object-cover"
                     />
                   )}
                 </div>
