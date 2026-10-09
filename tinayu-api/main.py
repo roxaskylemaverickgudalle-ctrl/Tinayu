@@ -1,8 +1,21 @@
+import logging
+import os
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
 from tinayu_engine import analyze_image
 from llama_explainer import generate_explanation
+
+
+# ============================================================
+# LOGGING AND UPLOAD CONFIGURATION
+# ============================================================
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("tinayu")
+
+MAX_UPLOAD_BYTES = 10 * 1024 * 1024  # 10 MB
 
 
 # ============================================================
@@ -12,7 +25,7 @@ from llama_explainer import generate_explanation
 app = FastAPI(
     title="Tinayu API",
     description="Backend API for Tinayu Personal Color Analysis AI",
-    version="1.0.0"
+    version="1.0.0",
 )
 
 
@@ -20,14 +33,21 @@ app = FastAPI(
 # CORS
 # ============================================================
 
+frontend_origins = [
+    origin.strip()
+    for origin in os.getenv(
+        "FRONTEND_ORIGINS",
+        "http://localhost:3000",
+    ).split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000"
-    ],
+    allow_origins=frontend_origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
 
@@ -40,7 +60,7 @@ def root():
     return {
         "name": "Tinayu API",
         "status": "running",
-        "version": "1.0.0"
+        "version": "1.0.0",
     }
 
 
@@ -50,9 +70,7 @@ def root():
 
 @app.get("/health")
 def health():
-    return {
-        "status": "healthy"
-    }
+    return {"status": "healthy"}
 
 
 # ============================================================
@@ -61,34 +79,18 @@ def health():
 
 @app.post("/analyze")
 async def analyze(file: UploadFile = File(...)):
-
     try:
-
-        # ------------------------------------------------------
-        # Validate upload
-        # ------------------------------------------------------
-
-        if not file:
-            return {
-                "success": False,
-                "error": "No image file was provided."
-            }
-
         if not file.filename:
             return {
                 "success": False,
-                "error": "Uploaded file has no filename."
+                "error": "Uploaded file has no filename.",
             }
-
-        # ------------------------------------------------------
-        # Validate file type
-        # ------------------------------------------------------
 
         allowed_types = {
             "image/jpeg",
+            "image/jpg",
             "image/png",
             "image/webp",
-            "image/jpg"
         }
 
         if file.content_type not in allowed_types:
@@ -97,71 +99,53 @@ async def analyze(file: UploadFile = File(...)):
                 "error": (
                     "Unsupported image format. "
                     "Please upload a JPG, PNG, or WebP image."
-                )
+                ),
             }
 
-        # ------------------------------------------------------
-        # Read uploaded image
-        # ------------------------------------------------------
-
-        image_bytes = await file.read()
+        # Read at most 10 MB plus one byte to detect oversized uploads.
+        image_bytes = await file.read(MAX_UPLOAD_BYTES + 1)
 
         if not image_bytes:
             return {
                 "success": False,
-                "error": "The uploaded image is empty."
+                "error": "The uploaded image is empty.",
             }
 
-        # ------------------------------------------------------
-        # Run Tinayu analysis engine
-        # ------------------------------------------------------
+        if len(image_bytes) > MAX_UPLOAD_BYTES:
+            return {
+                "success": False,
+                "error": "Image is too large. Maximum size is 10 MB.",
+            }
 
-        result = analyze_image(
-            image_bytes
-        )
+        # Run the existing deterministic color-analysis engine.
+        result = analyze_image(image_bytes)
 
-        # ------------------------------------------------------
-        # Generate Llama explanation
-        # ------------------------------------------------------
-
+        # Llama is optional; its failure must not break color analysis.
         if result.get("success"):
-
             try:
-
                 result["explanation"] = generate_explanation(
                     result.get("profile", {}),
-                    result.get("recommendations", {})
+                    result.get("recommendations", {}),
                 )
-
             except Exception:
-
-                # Llama failure should never break
-                # the main Tinayu color analysis.
+                logger.exception("Tinayu explanation generation failed")
                 result["explanation"] = None
 
-        # ------------------------------------------------------
-        # Add upload information
-        # ------------------------------------------------------
-
         result["filename"] = file.filename
-
-        # ------------------------------------------------------
-        # Return complete Tinayu analysis
-        # ------------------------------------------------------
-
         return result
 
     except ValueError as error:
-
         return {
             "success": False,
-            "error": str(error)
+            "error": str(error),
         }
 
-    except Exception as error:
-
+    except Exception:
+        logger.exception("Unexpected error during image analysis")
         return {
             "success": False,
-            "error": "Unexpected server error.",
-            "details": str(error)
+            "error": "Unexpected server error. Please try again.",
         }
+
+    finally:
+        await file.close()
