@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ChangeEvent,
   ClipboardEvent,
@@ -525,6 +526,25 @@ function AnalysisJourney({
 }
 
 export default function Home() {
+  useEffect(function () {
+    try {
+      const stored = sessionStorage.getItem("tinayu-scan-result");
+      if (!stored) return;
+      const payload = JSON.parse(stored) as { analysis?: AnalysisData; image?: string };
+      if (payload.analysis) {
+        setAnalysis(payload.analysis);
+        setShowResults(true);
+      }
+      if (payload.image) setImage(payload.image);
+      sessionStorage.removeItem("tinayu-scan-result");
+    } catch (storageError) {
+      console.error("Could not restore Tinayu scan results:", storageError);
+      sessionStorage.removeItem("tinayu-scan-result");
+    }
+  }, []);
+
+  const [guideCardIndex, setGuideCardIndex] = useState(0);
+
   const [cameraMode, setCameraMode] = useState<"upload" | "camera">(
     "upload"
   );
@@ -1229,56 +1249,170 @@ export default function Home() {
       </nav>
 
       {!showResults && (
-        <section className="mx-auto max-w-5xl px-5 pb-24 pt-20 sm:px-8 sm:pt-28">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-medium text-stone-600 shadow-sm">
-              <SparkleIcon />
-              AI-powered personal color analysis
-            </div>
-
-            <h1 className="text-5xl font-semibold tracking-[-0.04em] text-stone-950 sm:text-7xl">
-              Discover the colors
-              <br />
-              that feel like you.
-            </h1>
-
-            <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-stone-500 sm:text-lg">
-              Upload a photo or use Smart Scan. Tinayu validates and analyzes
-              facial color characteristics and creates a personalized
-              palette for clothing, makeup, and accents.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-14 max-w-3xl">
-            <div className="rounded-[2rem] border border-stone-200 bg-white p-3 shadow-[0_20px_70px_rgba(28,25,23,0.08)]">
-              <div className="flex rounded-2xl bg-stone-100 p-1">
-                <button
-                  type="button"
-                  onClick={switchToUpload}
-                  className={
-                    "flex-1 rounded-xl px-5 py-3 text-sm font-semibold transition " +
-                    (cameraMode === "upload"
-                      ? "bg-white text-stone-900 shadow-sm"
-                      : "text-stone-500 hover:text-stone-800")
-                  }
-                >
-                  Upload photo
-                </button>
-
-                <button
-                  type="button"
-                  onClick={switchToCamera}
-                  className={
-                    "flex-1 rounded-xl px-5 py-3 text-sm font-semibold transition " +
-                    (cameraMode === "camera"
-                      ? "bg-white text-stone-900 shadow-sm"
-                      : "text-stone-500 hover:text-stone-800")
-                  }
-                >
-                  Use camera
-                </button>
+        <section className="mx-auto max-w-7xl px-5 pb-24 pt-5 sm:px-8 sm:pt-8 lg:pt-10">
+          <div className="grid items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
+            <div className="text-center lg:text-left">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#eadbd8] bg-white/80 px-4 py-2 text-xs font-medium tracking-wide text-[#875f63] shadow-sm">
+                <SparkleIcon />
+                YOUR PERSONAL COLOR DISCOVERY
               </div>
 
+              <h1 className="text-5xl font-semibold leading-[1.08] tracking-[-0.055em] text-stone-950 sm:text-6xl lg:text-7xl">
+                Find the colors
+                <br />
+                that feel like{" "}
+                <span className="font-serif italic font-normal text-[#b7797e]">
+                  you.
+                </span>
+              </h1>
+
+              <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg lg:mx-0">
+                Get a more guided color analysis with Tinayu Smart Scan.
+                Scan your face live for a more interactive experience,
+                or upload a photo whenever that works better for you.
+              </p>
+
+              <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:justify-start">
+                <Link
+                  href="/scan"
+                  className="group relative inline-flex min-h-14 items-center justify-center gap-3 overflow-hidden rounded-2xl bg-stone-950 px-6 py-4 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(28,25,23,0.22)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-[0_18px_38px_rgba(28,25,23,0.28)] focus:outline-none focus:ring-2 focus:ring-[#bd8587] focus:ring-offset-2">
+                  <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/[0.09] to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="relative flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-[#e8c6c3]">
+                    <CameraIcon />
+                  </span>
+                  <span className="relative text-left">
+                    <span className="block">Scan with camera</span>
+                    <span className="mt-0.5 block text-xs font-normal text-stone-300">
+                      Guided, real-time color discovery
+                    </span>
+                  </span>
+                  <span aria-hidden="true" className="relative ml-1 text-base text-[#e8c6c3] transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <span className="inline-flex items-center justify-center gap-3 px-2 py-1 text-xs font-medium uppercase tracking-[0.22em] text-stone-400 sm:px-1">
+                  <span className="h-px w-8 bg-stone-300 sm:hidden" />
+                  or
+                  <span className="h-px w-8 bg-stone-300 sm:hidden" />
+                </span>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-md">
+              <div className="absolute -left-5 top-10 h-24 w-24 rounded-full bg-[#ead5d2]/70 blur-2xl" />
+              <div className="absolute -right-4 bottom-8 h-28 w-28 rounded-full bg-[#d9dfcb]/80 blur-2xl" />
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/80 p-5 shadow-[0_24px_80px_rgba(105,75,67,0.12)] backdrop-blur sm:p-7">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#a77b7b]">
+                      The color edit
+                    </p>
+                    <h2 className="mt-1 text-xl font-semibold tracking-tight text-stone-900">
+                      Your palette starts here
+                    </h2>
+                  </div>
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f4e8e5] text-[#a66f75]">
+                    <SparkleIcon />
+                  </div>
+                </div>
+
+                <div className="mt-7 grid grid-cols-5 gap-2">
+                  {["#B96F76", "#D8A89C", "#E8D6BC", "#AAB59A", "#647C70", "#805C68", "#C5A6B4", "#E5C8BE", "#B7B9A1", "#D2B16F"].map((color, index) => (
+                    <span key={`${color}-${index}`} className="aspect-square rounded-xl shadow-sm ring-1 ring-black/[0.04]" style={{ backgroundColor: color }} />
+                  ))}
+                </div>
+                <div className="mt-5 flex items-center gap-3 rounded-2xl bg-[#f8f4f0] p-4">
+                  <div className="flex -space-x-2" aria-hidden="true">
+                    {["#D8A89C", "#AAB59A", "#805C68"].map((color) => <span key={color} className="h-7 w-7 rounded-full border-2 border-[#f8f4f0]" style={{ backgroundColor: color }} />)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-stone-800">Made around your colors</p>
+                    <p className="mt-0.5 text-xs leading-5 text-stone-500">Start with a photo to explore your palette.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="flex h-full flex-col rounded-[1.75rem] border border-[#eadbd8] bg-white/85 p-5 shadow-[0_12px_36px_rgba(105,75,67,0.07)] sm:p-6 order-4 lg:order-none lg:col-start-2 lg:row-start-2">
+              {(() => {
+                  const guideCards = [
+                    {
+                      eyebrow: "01 · YOUR SEASON",
+                      title: "What does your season mean?",
+                      description:
+                        "A color season groups colors that tend to harmonize with your overall coloring. Spring, Summer, Autumn, and Winter are useful guides—not rules for what you can or cannot wear.",
+                      tip: "Use your palette as a starting point, then choose the shades that make you feel most like yourself.",
+                      colors: ["#E8C28D", "#D88E79", "#A8B88E", "#719080", "#B96F76"],
+                    },
+                    {
+                      eyebrow: "02 · UNDERTONE",
+                      title: "What does neutral mean?",
+                      description:
+                        "A neutral undertone means your skin may show a balance of warm and cool qualities, rather than leaning strongly toward either one. It does not mean your skin has no undertone.",
+                      tip: "Neutral? You may find both warm and cool shades wearable. Compare colors in natural light instead of relying on one test alone.",
+                      colors: ["#D9B49B", "#C9B7A5", "#B9B5A0", "#B8A0AA", "#C7A96B"],
+                    },
+                    {
+                      eyebrow: "03 · COLOR HARMONY",
+                      title: "What are contrast and depth?",
+                      description:
+                        "Contrast describes how much light-dark difference your features show together. Depth describes whether lighter or deeper colors tend to complement your overall coloring.",
+                      tip: "These are clues—not a score of your appearance. They help you explore combinations that feel balanced.",
+                      colors: ["#F0E2D0", "#CDA79D", "#AAB59A", "#805C68", "#35483F"],
+                    },
+                    {
+                      eyebrow: "04 · MEET TINAYU",
+                      title: "Your colors, made easier.",
+                      description:
+                        "Tinayu brings your photo-based analysis and color guidance together so you can better understand the terms and explore shades for clothing, makeup, and personal style.",
+                      tip: "Ready to explore? Upload a clear photo or try Smart Scan below. Results are guidance, not a fixed label.",
+                      colors: ["#B96F76", "#D8A89C", "#E8D6BC", "#AAB59A", "#647C70"],
+                    },
+                  ];
+                  const activeCard = guideCards[guideCardIndex];
+                  return (
+                    <div aria-live="polite">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#a77b7b]">{activeCard.eyebrow}</p>
+                        <p className="shrink-0 text-xs font-medium text-stone-400">{guideCardIndex + 1} / {guideCards.length}</p>
+                      </div>
+                      <h3 className="mt-2 text-lg font-semibold leading-snug tracking-tight text-stone-900 sm:text-xl">{activeCard.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-stone-600">{activeCard.description}</p>
+                      <div className="mt-4 flex items-center gap-2" aria-label="Example color palette">
+                        {activeCard.colors.map((color) => <span key={color} className="h-7 flex-1 rounded-lg ring-1 ring-black/[0.04]" style={{ backgroundColor: color }} />)}
+                      </div>
+                      <p className="mt-4 rounded-xl border border-[#eadbd5] bg-[#f8f4f0] p-3 text-xs leading-5 text-stone-600"><span className="font-semibold text-stone-800">A helpful note: </span>{activeCard.tip}</p>
+                      <div className="mt-4 flex items-center justify-between gap-2">
+                        <button type="button" onClick={() => setGuideCardIndex((current) => (current - 1 + guideCards.length) % guideCards.length)} className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-3 py-2.5 text-sm font-semibold text-stone-700 transition hover:border-[#c99a98] hover:bg-[#fffaf8] focus:outline-none focus:ring-2 focus:ring-[#c99a98] focus:ring-offset-2" aria-label="Previous color guide card"><span aria-hidden="true">←</span> Previous</button>
+                        <div className="flex gap-1.5" aria-label="Choose guide card">
+                          {guideCards.map((card, index) => <button key={card.eyebrow} type="button" onClick={() => setGuideCardIndex(index)} className={`h-2.5 rounded-full transition-all ${index === guideCardIndex ? "w-6 bg-[#a77b7b]" : "w-2.5 bg-stone-300 hover:bg-stone-400"}`} aria-label={`Go to ${card.title}`} aria-current={index === guideCardIndex ? "step" : undefined} />)}
+                        </div>
+                        <button type="button" onClick={() => setGuideCardIndex((current) => (current + 1) % guideCards.length)} className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2" aria-label="Next color guide card">Next <span aria-hidden="true">→</span></button>
+                      </div>
+                    </div>
+                  );
+                })()}
+              <div className="mt-5 rounded-2xl border border-[#eadbd5] bg-[#f8f4f0] p-4 sm:p-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#a77b7b]">HOW TINAYU WORKS</p>
+                <div className="mt-3 grid grid-cols-3 gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-stone-900">01 · Choose</p>
+                    <p className="mt-1 text-xs leading-5 text-stone-500">Upload a photo or use Smart Scan.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-stone-900">02 · Analyze</p>
+                    <p className="mt-1 text-xs leading-5 text-stone-500">Tinayu checks your image and colors.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-stone-900">03 · Explore</p>
+                    <p className="mt-1 text-xs leading-5 text-stone-500">Learn about your palette and shades.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
+            <div className="h-full rounded-[2rem] border border-stone-200 bg-white p-3 shadow-[0_20px_70px_rgba(28,25,23,0.08)]">
               <div className="p-5 sm:p-8">
                 {cameraMode === "upload" && (
                   <div>
@@ -1596,6 +1730,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
           </div>
         </section>
       )}
